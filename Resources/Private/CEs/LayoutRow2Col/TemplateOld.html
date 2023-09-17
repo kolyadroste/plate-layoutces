@@ -1,0 +1,84 @@
+<fluid data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3Fluid/Fluid/ViewHelpers">
+
+    <f:layout name="LayoutCeDefault"/>
+
+    <f:section name="Header"></f:section>
+
+    <f:section name="LayoutVars">
+        <f:variable name="tplInjectedClasses" value="pl-layoutrow3col bgcolor-transition"/>
+        <f:switch expression="{position}">
+            <f:case value="position-absolute"><f:variable name="tplInjectedClasses" value="{tplInjectedClasses} w-100 position-absolute"/></f:case>
+            <f:case value="position-sticky"><f:variable name="tplInjectedClasses" value="{tplInjectedClasses} w-100  sticky top-0 stuck-transition"/></f:case>
+            <f:case value="position-fixed"><f:variable name="tplInjectedClasses" value="{tplInjectedClasses} w-100 position-fixed top-0 zindex-fixed"/></f:case>
+            <f:defaultCase><f:variable name="tplInjectedClasses" value="{tplInjectedClasses} position-relative"/></f:defaultCase>
+        </f:switch>
+        <f:variable name="tplInjectedVars" value=""/>
+        <f:if condition="{backgroundColorFull}"><f:variable name="tplInjectedVars" value="{tplInjectedVars} --pl-lce-bgcolor: var({backgroundColorFull}, transparent);"/></f:if>
+        <f:if condition="{stuckBackgroundColorFull}"><f:variable name="tplInjectedVars" value="{tplInjectedVars} --pl-lce-stuck-bgcolor: var({stuckBackgroundColorFull}, transparent);"/></f:if>
+        <f:if condition="{shadowFull}"><f:variable name="tplInjectedVars" value="{tplInjectedVars} --pl-lce-box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"/></f:if>
+        <f:if condition="{stuckShadowFull}"><f:variable name="tplInjectedVars" value="{tplInjectedVars} --pl-lce-stuck-box-shadow:  0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"/></f:if>
+    </f:section>
+
+
+    <f:section name="Main">
+        <f:variable name="containerVars" value=""/>
+        <f:if condition="{backgroundColorContent}"><f:variable name="containerVars" value="{containerVars} --pl-lce-container-bgcolor: var({backgroundColorContent}, transparent);"/></f:if>
+        <f:if condition="{stuckBackgroundColorContent}"><f:variable name="containerVars" value="{containerVars} --pl-lce-stuck-container-bgcolor: var({stuckBackgroundColorContent}, transparent);"/></f:if>
+        <f:if condition="{stuckPaddingVertical}"><f:variable name="containerVars" value="{containerVars} --pl-lce-stuck-pv: var({stuckPaddingVertical}, 0);"/></f:if>
+        <f:if condition="{stuckPaddingHorizontal}"><f:variable name="containerVars" value="{containerVars} --pl-lce-stuck-ph: var({stuckPaddingHorizontal}, 0);"/></f:if>
+
+
+        <f:variable name="containerClass" value="container"/>
+        <f:if condition="{contentFrameWidth} == 'full'">
+            <f:variable name="containerClass" value="container-fluid p-0"/>
+            <f:variable name="paddingWhenFullWidth" value="px-medium"/>
+        </f:if>
+
+        <f:comment>{_all}</f:comment>
+        <f:variable name="columnStyle" value='grid-template-columns:{colsDesktop}; grid-template-areas: "col1 col2";'/>
+
+        <f:asset.css identifier="plate.sticky-behaviours" href="EXT:plate_layoutces/Resources/Public/Styles/Components/plate.sticky-behaviours.css"/>
+        <f:asset.script identifier="atomic-stickystate" src="EXT:plate_atomic_assets/Resources/Public/Webcomponents/Dist/atomic-stickystate.min.js"/>
+
+        <f:variable name="vars" value=""/>
+        <f:if condition="{stuckPaddingVertical}"><f:variable name="vars" value='--stuck-padding-vertical:var({stuckPaddingVertical});'/></f:if>
+        <f:if condition="{stuckPaddingHorizontal}"><f:variable name="vars" value='{vars} --stuck-padding-horizontal:var({stuckPaddingHorizontal});'/></f:if>
+        <f:comment>{_all}</f:comment>
+        <f:switch expression="{position}">
+            <f:case value="position-fixed">
+                <f:asset.css identifier="plate.sticky-row" href="EXT:plate_layoutces/Resources/Public/Styles/Components/plate.sticky-row.css"/>
+                <div class="@container {containerClass} {paddingVertical} {paddingHorizontal}" style="{containerVars}">
+                    <div class="d-grid sticky-row {paddingVertical} {paddingHorizontal} {paddingWhenFullWidth}" id="pl-lce-grid-{data.uid}" style="{columnStyle} {vars} --plate-sticky-row-bg-notstuck:{backgroundColor}; --plate-sticky-row-bg-stuck:{stuckBackgroundColor}">
+                        <f:render section="Render2Columns" arguments="{_all}"/>
+                    </div>
+                </div>
+            </f:case>
+            <f:defaultCase>
+                <div class="@container {containerClass} {paddingVertical} {paddingHorizontal}" style="{containerVars}">
+                    <div class="d-grid {paddingVertical} {paddingWhenFullWidth}" style="{columnStyle}" id="pl-lce-grid-{data.uid}">
+                        <f:render section="Render2Columns" arguments="{_all}"/>
+                    </div>
+                </div>
+            </f:defaultCase>
+        </f:switch>
+
+    </f:section>
+
+    <f:section name="Render2Columns">
+        <div class="@container d-flex {col1Direction} {col1Align} {col1AlignVertical}" style="grid-area:col1;">
+            {f:render(section: 'CeColumn', arguments: '{content: children_101, column: _columns.1,
+            breakpoint: _columns.breakpoint, collapse: collapse, colCount: colCount, align:col1Align}') -> f:if(condition: children_101)}
+        </div>
+        <div class="@container d-flex {col2Direction} {col2Align} {col2AlignVertical}" style="grid-area:col2;">
+            {f:render(section: 'CeColumn', arguments: '{content: children_102, column: _columns.2,
+            breakpoint: _columns.breakpoint, collapse: collapse, colCount: colCount, align:col2Align}') -> f:if(condition: children_102)}
+        </div>
+    </f:section>
+
+    <f:section name="CeColumn">
+        <f:for each="{content}" as="record">
+            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: record)}
+        </f:for>
+    </f:section>
+
+</fluid>

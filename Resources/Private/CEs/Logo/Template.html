@@ -1,0 +1,49 @@
+<fluid
+        data-namespace-typo3-fluid="true"
+        xmlns:f="http://typo3.org/ns/TYPO3Fluid/Fluid/ViewHelpers">
+
+    <f:layout name="LayoutCeDefault"/>
+
+    <f:section name="Header"></f:section>
+
+    <f:section name="LayoutVars">
+        <f:variable name="wrapperTag" value="header"/>
+        <f:variable name="sticky"
+                    value="{f:if(condition:flexform.settings.isSticky, then:'navbar-top fixed-top navbar-fixed-top bg-white')}"/>
+        <f:variable name="additionalClasses" value="vars-dark vars-inverted a-background{sticky}"/>
+        <f:variable name="uid" value="{data.uid}"/>
+    </f:section>
+
+    <f:section name="Main">
+        <div class="wrapper plateLayoutCesLogo">
+            <f:if condition="{logoOverride} && {logoOverride.0}">
+                <f:asset.css identifier="plate_layoutces.logo" href="{public}/Styles/Logo.css"/>
+                <f:if condition="{logoOverride.0.link}">
+                    <f:then>
+                        <f:link.typolink parameter="{logoOverride.0.link}">
+                            <f:image image="{logoOverride.0}" width="{logoWidth}" height="{logoHeight}" alt="{logo.alternative}" title="{logo.title}"/>
+                        </f:link.typolink>
+                    </f:then>
+                    <f:else>
+                        <f:image image="{logoOverride.0}" width="{logoWidth}" height="{logoHeight}" alt="{logo.alternative}" title="{logo.title}"/>
+                    </f:else>
+                </f:if>
+            </f:if>
+        </div>
+        <f:render section="LogoStyles" arguments="{_all}"/>
+    </f:section>
+
+    <f:section name="LogoStyles">
+        <f:asset.css identifier="plate.lce.logo" href="EXT:plate_layoutces/Resources/Public/Styles/Logo.css"/>
+        <f:asset.css identifier="plate.lce-logo-{data.uid}">
+
+            <f:if condition="{stuckLogoWidth} || {stuckLogoHeight}">
+
+                atomic-stickystate[stuck] #c{data.uid} img{
+                    <f:if condition="{stuckLogoWidth}">width: {stuckLogoWidth}px;</f:if>
+                    <f:if condition="{stuckLogoHeight}">height: {stuckLogoHeight}px;</f:if>
+                }
+            </f:if></f:asset.css>
+    </f:section>
+
+</fluid>

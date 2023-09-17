@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Einstellungen</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.navEntryId>
+                        <TCEforms>
+                            <label>Id Menü</label>
+                            <config>
+                                <type>input</type>>
+                            </config>
+                        </TCEforms>
+                    </settings.navEntryId>
+                    <settings.dropdownIcon>
+                        <TCEforms>
+                            <label>Dropdown Icon</label>
+                            <config>
+                                <type>input</type>>
+                                <renderType>iconSelection</renderType>
+                            </config>
+                        </TCEforms>
+                    </settings.dropdownIcon>
+                </el>
+            </ROOT>
+        </sDEF>
+        <level0>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>L0 Links</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.navL0Gap>
+                        <TCEforms>
+                            <label>Navi - Abstände</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsGapVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.navL0Gap>
+                    <settings.l0BackgroundColor>
+                        <TCEforms>
+                            <label>Hintergrund</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l0BackgroundColor>
+                    <settings.l0LinkType>
+                        <TCEforms>
+                            <label>Linkart</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Button</numIndex>
+                                        <numIndex index="1">isButton</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Link</numIndex>
+                                        <numIndex index="1">transparent</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.l0LinkType>
+                    <settings.l0IconColor>
+                        <TCEforms>
+                            <label>Icon Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l0IconColor>
+                    <settings.l0ButtonColor>
+                        <TCEforms>
+                            <label>Button Farbe</label>
+                            <displayCond>
+                                <or>
+                                    <numIndex index="0">FIELD:level0.settings.l0LinkType:=:isButton</numIndex>
+                                </or>
+                            </displayCond>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l0ButtonColor>
+                    <settings.l0LinkColor>
+                        <TCEforms>
+                            <label>Link Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l0LinkColor>
+                    <settings.l0LinkHoverColor>
+                        <TCEforms>
+                            <label>Link Hover Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsHoverColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l0LinkHoverColor>
+                    <settings.l0ButtonHoverColor>
+                        <TCEforms>
+                            <label>Button Hover Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsHoverColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l0ButtonHoverColor>
+                    <settings.l0FontSize>
+                        <TCEforms>
+                            <label>Schriftgröße</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Sehr klein</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:1rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Klein</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:1.2rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">Medium</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:1.5rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">Groß</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize2rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">Sehr groß</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:3rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">XL</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:4rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7" type="array">
+                                        <numIndex index="0">XXL</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:5rem;</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.l0FontSize>
+                </el>
+            </ROOT>
+        </level0>
+        <level1>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>L1 Links</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.showL1Thumbnails>
+                        <TCEforms>
+                            <label>Thumbnails anzeigen (wenn in Unterseite gesetzt)</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.showL1Thumbnails>
+                    <settings.navL1Gap>
+                        <TCEforms>
+                            <label>Navi - Abstände</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsGapVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.navL1Gap>
+                    <settings.l1BackgroundColor>
+                        <TCEforms>
+                            <label>Hintergrund</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l1BackgroundColor>
+                    <settings.l1LinkType>
+                        <TCEforms>
+                            <label>Linkart</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Button</numIndex>
+                                        <numIndex index="1">isButton</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Link</numIndex>
+                                        <numIndex index="1">transparent</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.l1LinkType>
+                    <settings.l1IconColor>
+                        <TCEforms>
+                            <label>Icon Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l1IconColor>
+                    <settings.l1ButtonColor>
+                        <TCEforms>
+                            <label>Button Farbe</label>
+                            <displayCond>
+                                <or>
+                                    <numIndex index="0">FIELD:level1.settings.l1LinkType:=:isButton</numIndex>
+                                </or>
+                            </displayCond>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l1ButtonColor>
+                    <settings.l1LinkColor>
+                        <TCEforms>
+                            <label>Link Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l1LinkColor>
+                    <settings.l1LinkHoverColor>
+                        <TCEforms>
+                            <label>Link Hover Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsHoverColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l1LinkHoverColor>
+                    <settings.l1ButtonHoverColor>
+                        <TCEforms>
+                            <label>Button Hover Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsHoverColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l1ButtonHoverColor>
+                    <settings.l1FontSize>
+                        <TCEforms>
+                            <label>Schriftgröße</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Sehr klein</numIndex>
+                                        <numIndex index="1">--plate-nav-l1-fontsize:1rem</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Klein</numIndex>
+                                        <numIndex index="1">--plate-nav-l1-fontsize:1.2rem</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">Medium</numIndex>
+                                        <numIndex index="1">--plate-nav-l1-fontsize:1.5rem</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">Groß</numIndex>
+                                        <numIndex index="1">--plate-nav-l1-fontsize2rem</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">Sehr groß</numIndex>
+                                        <numIndex index="1">--plate-nav-l1-fontsize:3rem</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">XL</numIndex>
+                                        <numIndex index="1">--plate-nav-l1-fontsize:4rem</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7" type="array">
+                                        <numIndex index="0">XXL</numIndex>
+                                        <numIndex index="1">--plate-nav-l1-fontsize:5rem</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.l1FontSize>
+                </el>
+            </ROOT>
+        </level1>
+        <stuck>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>L0 wenn Sticky</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.l0StuckFontSize>
+                        <TCEforms>
+                            <label>Schriftgröße</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Sehr klein</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-stuck-fontsize:1rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Klein</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-stuck-fontsize:1.2rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">Medium</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-stuck-fontsize:1.5rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">Groß</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-stuck-fontsize:2rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">Sehr groß</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-stuck-fontsize:3rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">XL</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-stuck-fontsize:4rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7" type="array">
+                                        <numIndex index="0">XXL</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-stuck-fontsize:5rem;</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.l0StuckFontSize>
+                </el>
+            </ROOT>
+        </stuck>
+        <home>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Home Link</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.homeLinkTrue>
+                        <TCEforms>
+                            <label>Home link anzeigen</label>
+                            <config>
+                                <type>check</type>>
+                                <default>true</default>
+                            </config>
+                        </TCEforms>
+                    </settings.homeLinkTrue>
+                    <settings.homeLinkIsIcon>
+                        <TCEforms>
+                            <label>Home link als Icon</label>
+                            <config>
+                                <type>check</type>>
+                                <default>true</default>
+                            </config>
+                        </TCEforms>
+                    </settings.homeLinkIsIcon>
+                    <settings.homeIcon>
+                        <TCEforms>
+                            <label>Home als Icon</label>
+                            <config>
+                                <type>input</type>>
+                                <renderType>iconSelection</renderType>
+                            </config>
+                        </TCEforms>
+                    </settings.homeIcon>
+                </el>
+            </ROOT>
+        </home>
+    </sheets>
+</T3DataStructure>

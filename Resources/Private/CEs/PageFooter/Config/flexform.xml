@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Einstellungen</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.secondaryNavId>
+                        <TCEforms>
+                            <label>Id Sekundär-Menü</label>
+                            <config>
+                                <type>input</type>>
+                            </config>
+                        </TCEforms>
+                    </settings.secondaryNavId>
+                    <settings.logoWidth>
+                        <TCEforms>
+                            <label>Logo Breite in Pixeln</label>
+                            <config>
+                                <type>input</type>>
+                            </config>
+                        </TCEforms>
+                    </settings.logoWidth>
+                    <settings.logoBorder>
+                        <TCEforms>
+                            <label>Rahmen um Logo</label>
+                            <config>
+                                <type>check</type>>
+                            </config>
+                        </TCEforms>
+                    </settings.logoBorder>
+                    <settings.socialNavGap>
+                        <TCEforms>
+                            <label>Social Navi - Abstände</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Sehr klein</numIndex>
+                                        <numIndex index="1">a-gap::extra-small</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Klein</numIndex>
+                                        <numIndex index="1">a-gap::small</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">Medium</numIndex>
+                                        <numIndex index="1">a-gap::medium</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">Groß</numIndex>
+                                        <numIndex index="1">a-gap::big</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">Sehr groß</numIndex>
+                                        <numIndex index="1">a-gap::large</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">Riesig</numIndex>
+                                        <numIndex index="1">a-gap::huge</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.socialNavGap>
+                    <settings.textBeneathLogo>
+                        <TCEforms>
+                            <label>Text erste Zeile, neben Logo</label>
+                            <config>
+                                <type>input</type>>
+                            </config>
+                        </TCEforms>
+                    </settings.textBeneathLogo>
+                    <settings.textFirstRow>
+                        <TCEforms>
+                            <label>Text erste Zeile</label>
+                            <config>
+                                <type>input</type>>
+                            </config>
+                        </TCEforms>
+                    </settings.textFirstRow>
+                    <settings.textSecondRowLeft>
+                        <TCEforms>
+                            <label>Text Zeile 2 > links</label>
+                            <config>
+                                <type>text</type>
+                                <enableRichtext>1</enableRichtext>
+                            </config>
+                        </TCEforms>
+                    </settings.textSecondRowLeft>
+                    <settings.textSecondRowCenter>
+                        <TCEforms>
+                            <label>Text Zeile 2 > mitte</label>
+                            <config>
+                                <type>text</type>
+                                <enableRichtext>1</enableRichtext>
+                            </config>
+                        </TCEforms>
+                    </settings.textSecondRowCenter>
+                    <settings.textSecondRowRight>
+                        <TCEforms>
+                            <label>Text Zeile 2 > rechts</label>
+                            <config>
+                                <type>text</type>
+                                <enableRichtext>1</enableRichtext>
+                            </config>
+                        </TCEforms>
+                    </settings.textSecondRowRight>
+                    <settings.textThirdRowCopyright>
+                        <TCEforms>
+                            <label>Text Zeile 3 > Copyright</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.textThirdRowCopyright>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

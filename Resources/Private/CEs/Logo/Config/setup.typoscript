@@ -1,0 +1,52 @@
+
+tt_content.tx_plate_layoutces_logo= COA
+tt_content.tx_plate_layoutces_logo {
+    10 =< lib.layoutCeDefault
+    10{
+        templateName = Template.html
+        templateRootPaths {
+            0 = EXT:plate_layoutces/Resources/Private/CEs/Logo/
+        }
+
+        variables {
+            logoWidth = TEXT
+            logoWidth {
+                data = flexform:pi_flexform:settings.logoWidth
+                ifEmpty =
+            }
+            logoHeight = TEXT
+            logoHeight {
+                data = flexform:pi_flexform:settings.logoHeight
+                ifEmpty =
+            }
+            stuckLogoWidth = TEXT
+            stuckLogoWidth {
+                data = flexform:pi_flexform:settings.stuckLogoWidth
+                ifEmpty =
+            }
+            stuckLogoHeight = TEXT
+            stuckLogoHeight {
+                data = flexform:pi_flexform:settings.stuckLogoHeight
+                ifEmpty =
+            }
+        }
+
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = image
+                references.table = tt_content
+                as = logoOverride
+
+                dataProcessing {
+                    10 = TYPO3\CMS\Frontend\DataProcessing\TextProcessor
+                    10 {
+                        references.fieldName  = showinview
+                        as = showinview
+                    }
+                }
+            }
+        }
+
+    }
+}

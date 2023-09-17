@@ -1,0 +1,69 @@
+
+tt_content.tx_plate_layoutces_iconnavigation = COA
+tt_content.tx_plate_layoutces_iconnavigation {
+    10 =< lib.layoutCeDefault
+    10{
+        templateName = Template.html
+        templateRootPaths {
+            0 = EXT:plate_layoutces/Resources/Private/CEs/IconNavigation/
+        }
+
+        variables {
+            navGap = TEXT
+            navGap {
+                data = flexform:pi_flexform:settings.navGap
+                ifEmpty = gap-medium
+            }
+            navOrientation = TEXT
+            navOrientation {
+                data = flexform:pi_flexform:settings.navOrientation
+                ifEmpty = -horizontal
+            }
+            navAlign = TEXT
+            navAlign {
+                data = flexform:pi_flexform:settings.navAlign
+                ifEmpty = justify-content-start
+            }
+            linkOrientation = TEXT
+            linkOrientation {
+                data = flexform:pi_flexform:settings.linkOrientation
+                ifEmpty = align-items-center
+            }
+            iconColor = TEXT
+            iconColor {
+                data = flexform:pi_flexform:settings.iconColor
+                ifEmpty = --bs-primary
+            }
+            linkColor = TEXT
+            linkColor {
+                data = flexform:pi_flexform:settings.linkColor
+                ifEmpty = --bs-primary
+            }
+            buttonColor = TEXT
+            buttonColor {
+                data = flexform:pi_flexform:settings.buttonColor
+                ifEmpty = --bs-primary
+            }
+        }
+
+        dataProcessing {
+            20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+            20 {
+                table = tx_plate_ttc_additions_links
+                pidInList.field = pid
+                where {
+                    data = field:uid
+                    intval = 1
+                    wrap = parentid=|
+                }
+                orderBy = sorting
+#                variables{
+#                    icon = TEXT
+#                    icon.field = tx_plate_ttc_additions_links
+#                }
+                as = additionalLinks
+            }
+        }
+
+    }
+}

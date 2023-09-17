@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Einstellungen</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.position>
+                        <TCEforms>
+                            <label>Position (zb. sticky, absolut, relativ)</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsPositionClasses</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.position>
+                    <settings.contentFrameWidth>
+                        <TCEforms>
+                            <label>Inhaltsbreite</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsWidthClasses</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.contentFrameWidth>
+                    <settings.paddingHorizontal>
+                        <TCEforms>
+                            <label>Innenabstamd Horizontal</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsGapVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.paddingHorizontal>
+                    <settings.paddingVert>
+                        <TCEforms>
+                            <label>Innenabstamd vertikal</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsGapVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.paddingVert>
+                    <settings.backgroundColorContent>
+                        <TCEforms>
+                            <label>Hintergrund Inhaltsbereich</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.backgroundColorContent>
+                    <settings.backgroundColorFull>
+                        <TCEforms>
+                            <label>Hintergrund volle breite</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.backgroundColorFull>
+                    <settings.shadowFull>
+                        <TCEforms>
+                            <label>Schatten auf vollter breite</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Ja</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.shadowFull>
+                </el>
+            </ROOT>
+        </sDEF>
+        <stuck>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Verhalten wenn Sticky (sticky / fixed)</sheetTitle>
+                    <displayCond>
+                        <or>
+                            <numIndex index="0">FIELD:sDEF.settings.position:=:position-fixed</numIndex>
+                            <numIndex index="1">FIELD:sDEF.settings.position:=:position-sticky</numIndex>
+                        </or>
+                    </displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.stuckHorizontalPadding>
+                        <TCEforms>
+                            <label>Innenabstamd horizontal</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsGapVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.stuckHorizontalPadding>
+                    <settings.stuckVerticalPadding>
+                        <TCEforms>
+                            <label>Innenabstamd vertikal</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsGapVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.stuckVerticalPadding>
+                    <settings.stuckBackgroundColorContent>
+                        <TCEforms>
+                            <label>Hintergrund Inhaltsbereich</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.stuckBackgroundColorContent>
+                    <settings.stuckBackgroundColorFull>
+                        <TCEforms>
+                            <label>Hintergrund volle breite</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.stuckBackgroundColorFull>
+                    <settings.stuckShadowFull>
+                        <TCEforms>
+                            <label>Schatten auf vollter breite</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Ja</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.stuckShadowFull>
+                </el>
+            </ROOT>
+        </stuck>
+        <colsWidthConfig>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Spaltenbreiten</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.colsDesktop>
+                        <TCEforms>
+                            <label>Spaltenbreiten Desktop</label>
+                            <config>
+                                <type>input</type>
+                                <eval>trim</eval>
+                                <valuePicker>
+                                    <items type="array">
+                                        <numIndex index="1">
+                                            <numIndex index="0">33 / 33 / 33</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                        </numIndex>
+                                        <numIndex index="2">
+                                            <numIndex index="0">50 / 25 / 25</numIndex>
+                                            <numIndex index="1">minmax(0,2fr) minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                        </numIndex>
+                                        <numIndex index="4">
+                                            <numIndex index="0">Auto / Auto / 100px</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) 100px</numIndex>
+                                        </numIndex>
+                                        <numIndex index="5">
+                                            <numIndex index="0">Auto / Auto / 200px</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) 200px</numIndex>
+                                        </numIndex>
+                                        <numIndex index="6">
+                                            <numIndex index="0">200px / auto / auto</numIndex>
+                                            <numIndex index="1">200px minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                        </numIndex>
+                                    </items>
+                                </valuePicker>
+                                <default>minmax(0,1fr) minmax(0,1f) minmax(0,1f)</default>
+                            </config>
+                        </TCEforms>
+                    </settings.colsDesktop>
+                    <settings.colAreasDesktop>
+                        <TCEforms>
+                            <label>Spaltenanordnung (default: links - rechts)</label>
+                            <config>
+                                <type>text</type>
+                                <valuePicker>
+                                    <items type="array">
+                                        <numIndex index="1">
+                                            <numIndex index="0">Nebeneinander</numIndex>
+                                            <numIndex index="1">"col1 col2 col3"</numIndex>
+                                        </numIndex>
+                                        <numIndex index="2">
+                                            <numIndex index="0">Untereinander</numIndex>
+                                            <numIndex index="1">"col1 col1 col1" "col2 col2 col2" "col3 col3 col3"</numIndex>
+                                        </numIndex>
+                                        <numIndex index="3">
+                                            <numIndex index="0">1 und 2 Nebeneinander 3 darunter</numIndex>
+                                            <numIndex index="1">"col1 col2 col2" "col3 col3 col3"</numIndex>
+                                        </numIndex>
+                                        <numIndex index="4">
+                                            <numIndex index="0">1 oben, 2 und 3 darunter</numIndex>
+                                            <numIndex index="1">"col1 col1 col1" "col2 col3 col3"</numIndex>
+                                        </numIndex>
+                                    </items>
+                                </valuePicker>
+                            </config>
+                        </TCEforms>
+                    </settings.colAreasDesktop>
+                    <settings.colsTablet>
+                        <TCEforms>
+                            <label>Spaltenbreiten Tablet</label>
+                            <config>
+                                <type>input</type>
+                                <eval>trim</eval>
+                                <valuePicker>
+                                    <items type="array">
+                                        <numIndex index="1">
+                                            <numIndex index="0">33 / 33 / 33</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) minmax(0,1rf) minmax(0,1fr)</numIndex>
+                                        </numIndex>
+                                        <numIndex index="2">
+                                            <numIndex index="0">50 / 25 / 25</numIndex>
+                                            <numIndex index="1">minmax(0,2fr) minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                        </numIndex>
+                                        <numIndex index="4">
+                                            <numIndex index="0">Auto / Auto / 100px</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) 100px</numIndex>
+                                        </numIndex>
+                                        <numIndex index="5">
+                                            <numIndex index="0">Auto / Auto / 200px</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) 200px</numIndex>
+                                        </numIndex>
+                                        <numIndex index="6">
+                                            <numIndex index="0">200px / auto / auto</numIndex>
+                                            <numIndex index="1">200px minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                        </numIndex>
+                                    </items>
+                                </valuePicker>
+                                <default></default>
+                            </config>
+                        </TCEforms>
+                    </settings.colsTablet>
+                    <settings.colAreasTablet>
+                        <TCEforms>
+                            <label>Spaltenanordnung Tablet</label>
+                            <config>
+                                <type>text</type>
+                                <valuePicker>
+                                    <items type="array">
+                                        <numIndex index="1">
+                                            <numIndex index="0">Nebeneinander</numIndex>
+                                            <numIndex index="1">"col1 col2 col3"</numIndex>
+                                        </numIndex>
+                                        <numIndex index="2">
+                                            <numIndex index="0">Untereinander</numIndex>
+                                            <numIndex index="1">"col1 col1 col1" "col2 col2 col2" "col3 col3 col3"</numIndex>
+                                        </numIndex>
+                                        <numIndex index="3">
+                                            <numIndex index="0">1 und 2 Nebeneinander 3 darunter</numIndex>
+                                            <numIndex index="1">"col1 col2 col2" "col3 col3 col3"</numIndex>
+                                        </numIndex>
+                                        <numIndex index="4">
+                                            <numIndex index="0">1 oben, 2 und 3 darunter</numIndex>
+                                            <numIndex index="1">"col1 col1 col1" "col2 col3 col3"</numIndex>
+                                        </numIndex>
+                                    </items>
+                                </valuePicker>
+                            </config>
+                        </TCEforms>
+                    </settings.colAreasTablet>
+                    <settings.colsMobile>
+                        <TCEforms>
+                            <label>Spaltenbreiten Mobile</label>
+                            <config>
+                                <type>input</type>
+                                <eval>trim</eval>
+                                <valuePicker>
+                                    <items type="array">
+                                        <numIndex index="1">
+                                            <numIndex index="0">33 / 33 / 33</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                        </numIndex>
+                                        <numIndex index="2">
+                                            <numIndex index="0">50 / 25 / 25</numIndex>
+                                            <numIndex index="1">minmax(0,2fr) minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                        </numIndex>
+                                        <numIndex index="4">
+                                            <numIndex index="0">Auto / Auto / 100px</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) 100px</numIndex>
+                                        </numIndex>
+                                        <numIndex index="5">
+                                            <numIndex index="0">Auto / Auto / 200px</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) 200px</numIndex>
+                                        </numIndex>
+                                        <numIndex index="6">
+                                            <numIndex index="0">200px / auto / auto</numIndex>
+                                            <numIndex index="1">200px minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                        </numIndex>
+                                    </items>
+                                </valuePicker>
+                                <default></default>
+                            </config>
+                        </TCEforms>
+                    </settings.colsMobile>
+                    <settings.colAreasMobile>
+                        <TCEforms>
+                            <label>Spaltenanordnung Mobile</label>
+                            <config>
+                                <type>text</type>
+                                <valuePicker>
+                                    <items type="array">
+                                        <numIndex index="1">
+                                            <numIndex index="0">Nebeneinander</numIndex>
+                                            <numIndex index="1">"col1 col2 col3"</numIndex>
+                                        </numIndex>
+                                        <numIndex index="2">
+                                            <numIndex index="0">Untereinander</numIndex>
+                                            <numIndex index="1">"col1 col1 col1" "col2 col2 col2" "col3 col3 col3"</numIndex>
+                                        </numIndex>
+                                        <numIndex index="3">
+                                            <numIndex index="0">1 und 2 Nebeneinander 3 darunter</numIndex>
+                                            <numIndex index="1">"col1 col2 col2" "col3 col3 col3"</numIndex>
+                                        </numIndex>
+                                        <numIndex index="4">
+                                            <numIndex index="0">1 oben, 2 und 3 darunter</numIndex>
+                                            <numIndex index="1">"col1 col1 col1" "col2 col3 col3"</numIndex>
+                                        </numIndex>
+                                    </items>
+                                </valuePicker>
+                                <default></default>
+                            </config>
+                        </TCEforms>
+                    </settings.colAreasMobile>
+                </el>
+            </ROOT>
+        </colsWidthConfig>
+        <col1Config>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Spalte 1</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.col1Direction>
+                        <TCEforms>
+                            <label>Nebeneinander / Untereinander</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">Untereinander</numIndex>
+                                        <numIndex index="1">flex-column</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.col1Direction>
+                    <settings.col1Align>
+                        <TCEforms>
+                            <label>Ausrichtung Align Desktop (wenn nebeneinander horiz sonst vert)</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->flexAlignItemsValues</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.col1Align>
+                    <settings.col1AlignTablet>
+                        <TCEforms>
+                            <label>Ausrichtung Align tablet (wenn nebeneinander horiz sonst vert)</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->flexAlignItemsValues</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.col1AlignTablet>
+                    <settings.col1AlignMobile>
+                        <TCEforms>
+                            <label>Ausrichtung Align mobile (wenn nebeneinander horiz sonst vert)</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->flexAlignItemsValues</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.col1AlignMobile>
+                    <settings.col1Justify>
+                        <TCEforms>
+                            <label>Ausrichtung Justify (wenn untereinander horiz sonst vert)</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->flexJustifyContentValues</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.col1Justify>
+                    <settings.col1JustifyTablet>
+                        <TCEforms>
+                            <label>Ausrichtung Align Tablet (wenn nebeneinander horiz sonst vert)</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->flexAlignItemsValues</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.col1JustifyTablet>
+                    <settings.col1JustifyMobile>
+                        <TCEforms>
+                            <label>Ausrichtung Align Mobile (wenn nebeneinander horiz sonst vert)</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->flexAlignItemsValues</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.col1JustifyMobile>
+                </el>
+            </ROOT>
+        </col1Config>
+    </sheets>
+</T3DataStructure>

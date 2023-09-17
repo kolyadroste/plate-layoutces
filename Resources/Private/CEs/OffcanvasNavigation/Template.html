@@ -1,0 +1,39 @@
+<fluid
+        data-namespace-typo3-fluid="true"
+        xmlns:f="http://typo3.org/ns/TYPO3Fluid/Fluid/ViewHelpers"
+>
+
+    <f:layout name="LayoutCeDefault"/>
+
+    <f:section name="LayoutVars">
+        <f:variable name="tplInjectedClasses" value="plate-offcanvasnav-wrapper"/>
+    </f:section>
+
+
+
+    <f:section name="Main">
+        <f:asset.css identifier="plate.nav" href="EXT:plate_layoutces/Resources/Public/Styles/Components/plate-nav.css"/>
+        <f:variable name="vars" value=""/>
+        <f:if condition="{l0FontSize}"><f:variable name="vars" value="{vars} {l0FontSize}"/></f:if>
+        <f:if condition="{l0StuckFontSize}"><f:variable name="vars" value="{vars} {l0StuckFontSize}"/></f:if>
+        <f:if condition="{l0BackgroundColor}"><f:variable name="vars" value="{vars} --atomic-button-background:var({l0BackgroundColor}, #eee);"/></f:if>
+        <f:if condition="{l0IconColor}"><f:variable name="vars" value="{vars} --bs-icon-color:var({l0IconColor});"/></f:if>
+        <f:if condition="{l0LinkColor}"><f:variable name="vars" value="{vars} --bs-link-color:var({l0LinkColor}); --bs-link--hover-color:var({l0LinkColor})"/></f:if>
+        <div class="plate-accordion-nav" style="{vars}">
+            <f:if condition="homeLinkTrue">
+                <f:variable name="homeLink" value="/"/>
+            </f:if>
+            <f:variable name="navConfig" value="{
+                nav:mainNavigation,
+                homeLink: homeLink,
+                homeLinkIsIcon: homeLinkIsIcon,
+                homeIcon: homeIcon,
+                dropdownIcon: dropdownIcon,
+                l0ButtonType: l0ButtonType,
+                l1ButtonType: l1ButtonType
+            }"/>
+            <f:render partial="Molecules/Navigation/AccordionNav" arguments="{data:navConfig}" />
+        </div>
+
+    </f:section>
+</fluid>

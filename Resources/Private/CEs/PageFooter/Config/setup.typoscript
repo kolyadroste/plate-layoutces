@@ -1,0 +1,76 @@
+
+tt_content.tx_plate_layoutces_pagefooter = COA
+tt_content.tx_plate_layoutces_pagefooter {
+
+    // pages from selection
+    10 =< lib.layoutCeDefault
+    10{
+        templateName = Template.html
+        templateRootPaths {
+            0 = EXT:plate_layoutces/Resources/Private/CEs/PageFooter/
+        }
+
+        variables{
+            textFirstRow = TEXT
+            textFirstRow.data = flexform: pi_flexform:settings.textFirstRow
+            textBeneathLogo = TEXT
+            textBeneathLogo.data = flexform: pi_flexform:settings.textBeneathLogo
+            logoBorder = TEXT
+            logoBorder.data = flexform: pi_flexform:settings.logoBorder
+            textSecondRowLeft = TEXT
+            textSecondRowLeft.data = flexform: pi_flexform:settings.textSecondRowLeft
+            textSecondRowCenter = TEXT
+            textSecondRowCenter.data = flexform: pi_flexform:settings.textSecondRowCenter
+            textSecondRowRight = TEXT
+            textSecondRowRight.data = flexform: pi_flexform:settings.textSecondRowRight
+            textThirdRowCopyright = TEXT
+            textThirdRowCopyright.data = flexform: pi_flexform:settings.textThirdRowCopyright
+            socialNavGap = TEXT
+            socialNavGap.data = flexform: pi_flexform:settings.socialNavGap
+
+            secondaryNavId = TEXT
+            secondaryNavId.data = flexform: pi_flexform:settings.secondaryNavId
+        }
+
+        dataProcessing {
+            120 = B13\Menus\DataProcessing\TreeMenu
+            120.if.isTrue.data = flexform: pi_flexform:settings.secondaryNavId
+            120.entryPoints.data = flexform: pi_flexform:settings.secondaryNavId
+            120.depth = 4
+            120.as = secondaryNav
+
+            1509614342 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            1509614342 {
+                references.fieldName = image
+                references.table = tt_content
+                as = logo
+
+                dataProcessing {
+                    10 = TYPO3\CMS\Frontend\DataProcessing\TextProcessor
+                    10 {
+                        references.fieldName  = showinview
+                        as = showinview
+                    }
+                }
+            }
+
+            20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+            20 {
+                table = tx_plate_ttc_additions_links
+                pidInList.field = pid
+                where {
+                    data = field:uid
+                    intval = 1
+                    wrap = parentid=|
+                }
+                orderBy = sorting
+                variables{
+                    icon = TEXT
+                    icon.field = tx_plate_ttc_additions_links
+                }
+                as = socialLinks
+            }
+        }
+    }
+
+}

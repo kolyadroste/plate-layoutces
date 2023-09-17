@@ -1,0 +1,83 @@
+#lib.layoutCeDefault =< lib.contentElement
+lib.layoutCeDefault = FLUIDTEMPLATE
+lib.layoutCeDefault {
+    templateName = Default
+    templateRootPaths {
+        1672956136 = EXT:plate_layoutces/Resources/Private/Templates/
+    }
+    partialRootPaths {
+        0 = EXT:fluid_styled_content/Resources/Private/Partials/
+        1672956120 = EXT:plate_partials/Resources/Private/Partials/
+        1672956132 = EXT:plate_layoutces/Resources/Private/Partials/
+    }
+    layoutRootPaths {
+        0 = EXT:fluid_styled_content/Resources/Private/Layouts/
+        1672956132 = EXT:plate_layoutces/Resources/Private/Layouts/
+    }
+    variables{
+        private = TEXT
+        private.value = EXT:plate_layoutces/Resources/Private
+        public = TEXT
+        public.value = EXT:plate_layoutces/Resources/Public
+        atomicAssets = TEXT
+        atomicAssets.value = EXT:plate_atomic_assets/Resources/Public
+        atomicBs = TEXT
+        atomicBs.value = EXT:plate_atomic_assets/Resources/Public/atomic-bootstrap/Dist
+    }
+    dataProcessing {
+        1100 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
+        1110 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+        1120 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+        1120{
+            fieldName = pi_flexform
+            as = flexform
+        }
+    }
+}
+
+lib.getElement = COA
+lib.getElement{
+    10 = RECORDS
+    10{
+        tables=tt_content
+        source.field = uid
+        //source = 26
+        dontCheckPid = 1
+    }
+}
+lib.hasSubpages = TEXT
+lib.hasSubpages{
+    numRows {
+        table = pages
+        select{
+            pidInList.data = field:uid
+        }
+    }
+}
+lib.pageNameById = TEXT
+lib.pageNameById{
+    data = field:uid
+    wrap = {DB:pages:|:title}
+    insertData = 1
+
+}
+lib.getMediaImgSlide = COA
+lib.getMediaImgSlide{
+    1 = TEXT
+    1.value = test:
+    5 = TEXT
+    5.data = levelfield: 1, media, slide
+    10 = FILES
+    10 {
+        references {
+            data = levelfield: 1, media, slide
+        }
+
+        renderObj = IMAGE
+        renderObj {
+            file.import.dataWrap = {file:current:storage}:{file:current:identifier}
+            altText.data = file:current:title
+            wrap = <div class="banner">|</div>
+        }
+    }
+}

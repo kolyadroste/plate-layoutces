@@ -1,0 +1,3 @@
+mod.wizards.newContentElement.wizardItems {
+    layout.header = Layout
+}

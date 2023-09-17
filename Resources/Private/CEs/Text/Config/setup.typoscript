@@ -1,0 +1,13 @@
+
+tt_content.tx_plate_layoutces_text= COA
+tt_content.tx_plate_layoutces_text {
+    10 =< lib.layoutCeDefault
+    10{
+        templateName = Template.html
+        templateRootPaths {
+            0 = EXT:plate_layoutces/Resources/Private/CEs/Text/
+        }
+
+
+    }
+}

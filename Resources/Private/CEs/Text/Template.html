@@ -1,0 +1,18 @@
+
+<fluid
+        data-namespace-typo3-fluid="true"
+        xmlns:f="http://typo3.org/ns/TYPO3Fluid/Fluid/ViewHelpers">
+
+    <f:layout name="LayoutCeDefault"/>
+
+    <f:section name="Header"></f:section>
+
+    <f:section name="Main">
+        <div class="wrapper mb-0:last-child">
+            <f:if condition="{data.bodytext}">
+                <f:format.html>{data.bodytext}</f:format.html>
+            </f:if>
+        </div>
+    </f:section>
+
+</fluid>

@@ -1,0 +1,74 @@
+<fluid
+        data-namespace-typo3-fluid="true"
+        xmlns:f="http://typo3.org/ns/TYPO3Fluid/Fluid/ViewHelpers"
+>
+    <f:layout name="LayoutCeDefault"/>
+
+    <f:section name="LayoutVars">
+        <f:variable name="wrapperTag" value="footer"/>
+        <f:variable name="additionalClasses" value="vars-inverted vars-primary"/>
+    </f:section>
+
+    <f:section name="Main">
+        <f:asset.css identifier="bs.frame" href="{atomicBs}/components/frame.css"/>
+        <f:asset.css identifier="bs.footer" href="{atomicBs}/components/footer.css"/>
+        <section class="section footer-section footer-section-content">
+                <div class="container">
+                    <div class="section-row">
+                        <div class="section-column footer-section-content-column footer-section-content-column-left">
+                            <div id="c4"
+                                 class="frame frame-default frame-type-text frame-layout-default frame-size-default frame-height-default frame-background-none frame-space-before-none frame-space-after-none frame-no-backgroundimage">
+                                <div class="frame-group-container">
+                                    <div class="frame-group-inner">
+                                        <div class="frame-container frame-container-default">
+                                            <div class="frame-inner">
+                                                <header class="frame-header"><h2 class="element-header ">
+                                                    <span>test</span></h2></header>
+                                                <p>s sdad ADA daS Ads</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-column footer-section-content-column footer-section-content-column-middle"></div>
+                        <div class="section-column footer-section-content-column footer-section-content-column-right"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section footer-section footer-section-meta">
+                <div class="frame frame-background-none frame-space-before-none frame-space-after-none">
+                    <div class="frame-group-container">
+                        <div class="frame-group-inner">
+                            <div class="frame-container frame-container-default">
+                                <div class="frame-inner">
+                                    <div class="footer-info-section">
+                                        <div class="footer-meta"></div>
+                                        <div class="footer-language">
+                                            <ul id="language_menu" class="language-menu">
+                                                <li class="active "><a href="/demo/default-title" hreflang="en-us"
+                                                                       title="English"><span>English</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer-copyright"><p>Running with <a href="http://www.typo3.org"
+                                                                                         target="_blank"
+                                                                                         rel="noreferrer noopener">TYPO3</a>
+                                            and <a href="https://www.bootstrap-package.com" target="_blank"
+                                                   rel="noreferrer noopener">Bootstrap Package</a>.</p></div>
+                                        <div class="footer-nav">
+                                            <f:variable name="smallNavConfig" value="{
+                                                atomicAssets:atomicAssets,
+                                                items: socialLinks,
+                                                gap: socialNavGap
+                                            }"/>
+                                            <f:render partial="Molecules/Navigation/SmallNav" arguments="{data:smallNavConfig}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </f:section>
+</fluid>

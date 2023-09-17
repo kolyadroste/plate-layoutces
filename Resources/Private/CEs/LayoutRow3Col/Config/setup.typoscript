@@ -1,0 +1,233 @@
+
+tt_content.tx_plate_layoutces_layoutrow3col = COA
+tt_content.tx_plate_layoutces_layoutrow3col {
+    10 =< lib.layoutCeDefault
+    10{
+        templateName = Template.html
+        templateRootPaths {
+            0 = EXT:plate_layoutces/Resources/Private/CEs/LayoutRow3Col/
+        }
+
+        variables {
+            col1Direction = TEXT
+            col1Direction {
+                data = flexform:pi_flexform:settings.col1Direction
+                ifEmpty =
+            }
+            col2Direction = TEXT
+            col2Direction {
+                data = flexform:pi_flexform:settings.col2Direction
+                ifEmpty =
+            }
+            col3Direction = TEXT
+            col3Direction {
+                data = flexform:pi_flexform:settings.col3Direction
+                ifEmpty =
+            }
+
+            position = TEXT
+            position {
+                data = flexform:pi_flexform:settings.position
+                ifEmpty =
+            }
+            contentFrameWidth = TEXT
+            contentFrameWidth {
+                data = flexform:pi_flexform:settings.contentFrameWidth
+                ifEmpty = frame
+            }
+
+            backgroundColorContent = TEXT
+            backgroundColorContent {
+                data = flexform:pi_flexform:settings.backgroundColorContent
+                ifEmpty = --bs-transparent
+            }
+            stuckBackgroundColorContent = TEXT
+            stuckBackgroundColorContent {
+                data = flexform:pi_flexform:settings.stuckBackgroundColorContent
+                ifEmpty = --bs-transparent
+            }
+
+            backgroundColorFull = TEXT
+            backgroundColorFull {
+                data = flexform:pi_flexform:settings.backgroundColorFull
+                ifEmpty = --bs-primary
+            }
+            stuckBackgroundColorFull = TEXT
+            stuckBackgroundColorFull {
+                data = flexform:pi_flexform:settings.stuckBackgroundColorFull
+                ifEmpty = --bs-primary
+            }
+            shadowFull = TEXT
+            shadowFull {
+                data = flexform:pi_flexform:settings.shadowFull
+                ifEmpty =
+            }
+            stuckShadowFull = TEXT
+            stuckShadowFull {
+                data = flexform:pi_flexform:settings.stuckShadowFull
+                ifEmpty =
+            }
+
+            paddingHorizontal = TEXT
+            paddingHorizontal {
+                data = flexform:pi_flexform:settings.paddingHorizontal
+                ifEmpty = --bs-gap-medium
+            }
+
+            paddingVertical = TEXT
+            paddingVertical {
+                data = flexform:pi_flexform:settings.paddingVert
+                ifEmpty = --bs-gap-medium
+            }
+
+            stuckPaddingHorizontal = TEXT
+            stuckPaddingHorizontal {
+                data = flexform:pi_flexform:settings.stuckHorizontalPadding
+                ifEmpty =
+            }
+
+            stuckPaddingVertical = TEXT
+            stuckPaddingVertical {
+                data = flexform:pi_flexform:settings.stuckVerticalPadding
+                ifEmpty =
+            }
+
+            col1Align = TEXT
+            col1Align {
+                data = flexform:pi_flexform:settings.col1Align
+                ifEmpty =
+            }
+            col1AlignTablet = TEXT
+            col1AlignTablet {
+                data = flexform:pi_flexform:settings.col1AlignTablet
+                ifEmpty =
+            }
+            col1AlignMobile = TEXT
+            col1AlignMobile {
+                data = flexform:pi_flexform:settings.col1AlignMobile
+                ifEmpty =
+            }
+            col1Justify = TEXT
+            col1Justify {
+                data = flexform:pi_flexform:settings.col1Justify
+                ifEmpty =
+            }
+            col1JustifyTablet = TEXT
+            col1JustifyTablet {
+                data = flexform:pi_flexform:settings.col1JustifyTablet
+                ifEmpty =
+            }
+            col1JustifyMobile = TEXT
+            col1JustifyMobile {
+                data = flexform:pi_flexform:settings.col1JustifyMobile
+                ifEmpty =
+            }
+            col2Align = TEXT
+            col2Align {
+                data = flexform:pi_flexform:settings.col2Align
+                ifEmpty =
+            }
+            col2AlignTablet = TEXT
+            col2AlignTablet {
+                data = flexform:pi_flexform:settings.col2AlignTablet
+                ifEmpty =
+            }
+            col2AlignMobile = TEXT
+            col2AlignMobile {
+                data = flexform:pi_flexform:settings.col2AlignMobile
+                ifEmpty =
+            }
+            col2Justify = TEXT
+            col2Justify {
+                data = flexform:pi_flexform:settings.col2Justify
+                ifEmpty =
+            }
+            col2JustifyTablet = TEXT
+            col2JustifyTablet {
+                data = flexform:pi_flexform:settings.col2JustifyTablet
+                ifEmpty =
+            }
+            col2JustifyMobile = TEXT
+            col2JustifyMobile {
+                data = flexform:pi_flexform:settings.col2JustifyMobile
+                ifEmpty =
+            }
+            col3Align = TEXT
+            col3Align {
+                data = flexform:pi_flexform:settings.col3Align
+                ifEmpty =
+            }
+            col3AlignTablet = TEXT
+            col3AlignTablet {
+                data = flexform:pi_flexform:settings.col3AlignTablet
+                ifEmpty =
+            }
+            col3AlignMobile = TEXT
+            col3AlignMobile {
+                data = flexform:pi_flexform:settings.col3AlignMobile
+                ifEmpty =
+            }
+            col3Justify = TEXT
+            col3Justify {
+                data = flexform:pi_flexform:settings.col3Justify
+                ifEmpty =
+            }
+            col3JustifyTablet = TEXT
+            col3JustifyTablet {
+                data = flexform:pi_flexform:settings.col3JustifyTablet
+                ifEmpty =
+            }
+            col3JustifyMobile = TEXT
+            col3JustifyMobile {
+                data = flexform:pi_flexform:settings.col3JustifyMobile
+                ifEmpty =
+            }
+            col1Width = TEXT
+            col1Width {
+                data = flexform:pi_flexform:settings.col1Width
+                ifEmpty = 1fr
+            }
+            col2Width = TEXT
+            col2Width {
+                data = flexform:pi_flexform:settings.col2Width
+                ifEmpty = 1fr
+            }
+            col3Width = TEXT
+            col3Width {
+                data = flexform:pi_flexform:settings.col3Width
+                ifEmpty = 1fr
+            }
+            colsDesktop = TEXT
+            colsDesktop {
+                data = flexform:pi_flexform:settings.colsDesktop
+            }
+            colsTablet = TEXT
+            colsTablet {
+                data = flexform:pi_flexform:settings.colsTablet
+            }
+            colsMobile = TEXT
+            colsMobile {
+                data = flexform:pi_flexform:settings.colsMobile
+            }
+            colAreasDesktop = TEXT
+            colAreasDesktop {
+                data = flexform:pi_flexform:settings.colAreasDesktop
+            }
+            colAreasTablet = TEXT
+            colAreasTablet {
+                data = flexform:pi_flexform:settings.colAreasTablet
+            }
+            colAreasMobile = TEXT
+            colAreasMobile {
+                data = flexform:pi_flexform:settings.colAreasMobile
+            }
+        }
+
+        dataProcessing {
+
+            1683380133 = B13\Container\DataProcessing\ContainerProcessor
+            1683380134 = Buepro\ContainerElements\DataProcessing\AspectProcessor
+        }
+
+    }
+}

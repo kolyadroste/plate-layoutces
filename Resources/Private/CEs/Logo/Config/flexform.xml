@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Einstellungen</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.logoWidth>
+                        <TCEforms>
+                            <label>Logo breite</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.logoWidth>
+                    <settings.logoHeight>
+                        <TCEforms>
+                            <label>Logo höhe</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.logoHeight>
+                </el>
+            </ROOT>
+        </sDEF>
+        <stuck>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Wenn Sticky</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.stuckLogoWidth>
+                        <TCEforms>
+                            <label>Logo breite</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.stuckLogoWidth>
+                    <settings.stuckLogoHeight>
+                        <TCEforms>
+                            <label>Logo höhe</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.stuckLogoHeight>
+                </el>
+            </ROOT>
+        </stuck>
+    </sheets>
+</T3DataStructure>

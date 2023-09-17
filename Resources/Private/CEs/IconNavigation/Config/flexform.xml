@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Einstellungen</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.navOrientation>
+                        <TCEforms>
+                            <label>Navi - Typ</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Vertikal</numIndex>
+                                        <numIndex index="1">-vertical</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Horizontal</numIndex>
+                                        <numIndex index="1">-horizontal</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.navOrientation>
+                    <settings.navAlign>
+                        <TCEforms>
+                            <label>Navi - Ausrichtung Horizontal</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsHorizAlignClasses</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.navAlign>
+                    <settings.navGap>
+                        <TCEforms>
+                            <label>Navi - Abstände</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsGapVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.navGap>
+                </el>
+            </ROOT>
+        </sDEF>
+        <links>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Links</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.linkOrientation>
+                        <TCEforms>
+                            <label>Navi - Link-Ausrichtung vertikal</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsVertAlignClasses</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.linkOrientation>
+                    <settings.iconColor>
+                        <TCEforms>
+                            <label>Icon Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.iconColor>
+                    <settings.linkColor>
+                        <TCEforms>
+                            <label>Link Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.linkColor>
+                    <settings.buttonColor>
+                        <TCEforms>
+                            <label>Button Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.buttonColor>
+                </el>
+            </ROOT>
+        </links>
+    </sheets>
+</T3DataStructure>

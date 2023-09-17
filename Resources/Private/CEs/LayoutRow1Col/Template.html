@@ -1,0 +1,175 @@
+<fluid
+        data-namespace-typo3-fluid="true"
+        xmlns:f="http://typo3.org/ns/TYPO3Fluid/Fluid/ViewHelpers"
+        xmlns:ac="http://typo3.org/ns/Atomicplan\PlateAtomicAssets\ViewHelpers">
+
+    <f:layout name="LayoutCeDefault"/>
+
+    <f:section name="Header"></f:section>
+
+    <f:section name="LayoutVars">
+        <f:variable name="tplInjectedClasses" value="pllce-container pl-layoutrow1col bgcolor-transition"/>
+        <f:switch expression="{position}">
+            <f:case value="position-absolute"><f:variable name="tplInjectedClasses" value="{tplInjectedClasses} w-100 position-absolute"/></f:case>
+            <f:case value="position-sticky"><f:variable name="tplInjectedClasses" value="{tplInjectedClasses} w-100  sticky top-0 stuck-transition"/></f:case>
+            <f:case value="position-fixed"><f:variable name="tplInjectedClasses" value="{tplInjectedClasses} w-100 position-fixed top-0 zindex-fixed"/></f:case>
+            <f:defaultCase><f:variable name="tplInjectedClasses" value="{tplInjectedClasses} position-relative"/></f:defaultCase>
+        </f:switch>
+        <f:switch expression="{backgroundColorFull}">
+            <f:case value="--bs-white"><f:variable name="colorizedFull" value="0"/></f:case>
+            <f:case value="--bs-transparent"><f:variable name="colorizedFull" value="0"/></f:case>
+            <f:case value="--bs-light"><f:variable name="colorizedFull" value="0"/></f:case>
+            <f:defaultCase><f:variable name="colorizedFull" value="1"/></f:defaultCase>
+        </f:switch>
+        <f:switch expression="{backgroundColorContent}">
+            <f:case value="--bs-white"><f:variable name="colorizedContent" value="0"/></f:case>
+            <f:case value="--bs-transparent"><f:variable name="colorizedContent" value="0"/></f:case>
+            <f:case value="--bs-light"><f:variable name="colorizedContent" value="0"/></f:case>
+            <f:defaultCase><f:variable name="colorizedContent" value="1"/></f:defaultCase>
+        </f:switch>
+        <f:if condition="{colorizedFull} || {colorizedContent}"><f:variable name="tplInjectedClasses" value="{tplInjectedClasses} -colorized bg-color{backgroundColorFull}"/></f:if>
+
+        <f:variable name="tplInjectedVars" value=""/>
+        <f:if condition="{backgroundColorFull}"><f:variable name="tplInjectedVars" value="{tplInjectedVars} --pl-lce-bgcolor: var({backgroundColorFull}, transparent);"/></f:if>
+        <f:if condition="{position} == 'position-fixed' && {stuckBackgroundColorFull}">
+            <f:then><f:variable name="tplInjectedVars" value="{tplInjectedVars} --pl-lce-stuck-bgcolor: var({stuckBackgroundColorFull}, 0);"/></f:then>
+            <f:else><f:variable name="tplInjectedVars" value="{tplInjectedVars} --pl-lce-stuck-bgcolor: var({backgroundColorFull}, 0);"/></f:else>
+        </f:if>
+
+        <f:if condition="{shadowFull}"><f:variable name="tplInjectedVars" value="{tplInjectedVars} --pl-lce-box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"/></f:if>
+        <f:if condition="{stuckShadowFull}"><f:variable name="tplInjectedVars" value="{tplInjectedVars} --pl-lce-stuck-box-shadow:  0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"/></f:if>
+        <f:if condition="{paddingVertical}"><f:variable name="tplInjectedVars" value="{tplInjectedVars} --pl-lce-pv: var({paddingVertical}, 0);"/></f:if>
+        <f:if condition="{position} == 'position-fixed' && {stuckPaddingVertical}">
+            <f:then><f:variable name="tplInjectedVars" value="{tplInjectedVars} --pl-lce-stuck-pv: var({stuckPaddingVertical}, 0);"/></f:then>
+            <f:else><f:variable name="tplInjectedVars" value="{tplInjectedVars} --pl-lce-stuck-pv: var({paddingVertical}, 0);"/></f:else>
+        </f:if>
+    </f:section>
+
+    <f:section name="Main">
+        <f:variable name="containerVars" value=""/>
+        <f:if condition="{paddingHorizontal}"><f:variable name="containerVars" value="{containerVars} --pl-lce-ph: var({paddingHorizontal}, 0);"/></f:if>
+        <f:if condition="{position} == 'position-fixed' && {stuckPaddingHorizontal}">
+            <f:then><f:variable name="containerVars" value="{containerVars} --pl-lce-stuck-ph: var({stuckPaddingHorizontal}, 0);"/></f:then>
+            <f:else><f:variable name="containerVars" value="{containerVars} --pl-lce-stuck-ph: var({paddingHorizontal}, 0);"/></f:else>
+        </f:if>
+        <f:if condition="{backgroundColorContent}"><f:variable name="containerVars" value="{containerVars} --pl-lce-container-bgcolor: var({backgroundColorContent}, transparent);"/></f:if>
+        <f:if condition="{stuckBackgroundColorContent}"><f:variable name="containerVars" value="{containerVars} --pl-lce-stuck-container-bgcolor: var({stuckBackgroundColorContent}, transparent);"/></f:if>
+
+
+        <f:comment>{_all}</f:comment>
+        <f:asset.css identifier="plate.sticky-behaviours" href="EXT:plate_layoutces/Resources/Public/Styles/Components/plate.sticky-behaviours.css"/>
+
+        <f:variable name="containerClass" value="container"/>
+        <f:if condition="{contentFrameWidth} == 'full'">
+            <f:variable name="containerClass" value="container-fluid"/>
+        </f:if>
+        <f:switch expression="{contentFrameWidth}">
+            <f:case value="narrow-1"><f:variable name="containerClass" value="{containerClass} narrow-1"/></f:case>
+            <f:case value="narrow-2"><f:variable name="containerClass" value="{containerClass} narrow-2"/></f:case>
+            <f:defaultCase></f:defaultCase>
+        </f:switch>
+        <f:switch expression="{position}">
+            <f:case value="absolute"><f:variable name="positionClass" value="position-absolute"/></f:case>
+            <f:case value="sticky"><f:variable name="positionClass" value="sticky top-0 stuck-transition"/></f:case>
+            <f:case value="fixed"><f:variable name="positionClass" value="position-fixed top-0 zindex-fixed"/></f:case>
+            <f:defaultCase><f:variable name="positionClass" value="position-relative"/></f:defaultCase>
+        </f:switch>
+
+        <f:variable name="columnStyle" value='grid-template-columns:minmax(0,1fr);
+            grid-template-areas:"col1";'/>
+
+        <f:asset.css identifier="plate.sticky-behaviours" href="EXT:plate_layoutces/Resources/Public/Styles/Components/plate.sticky-behaviours.css"/>
+        <f:asset.css identifier="plate.justify-content" href="EXT:plate_atomic_assets/Resources/Public/atomic-components/ac.justify-content.css"/>
+        <f:asset.css identifier="plate.content-col" href="EXT:plate_layoutces/Resources/Public/Styles/Components/plate.content-col.css"/>
+        <f:asset.script identifier="atomic-stickystate" src="EXT:plate_atomic_assets/Resources/Public/Webcomponents/Dist/atomic-stickystate.min.js"/>
+
+        <f:switch expression="{position}">
+            <f:case value="position-fixed">
+                <f:comment>{stuckBackgroundColor}</f:comment>
+                <f:asset.css identifier="plate.sticky-row" href="EXT:plate_layoutces/Resources/Public/Styles/Components/plate.sticky-row.css"/>
+                <div class="@container {containerClass}" style="{containerVars}">
+                    <div class="d-grid sticky-row" id="pl-lce-grid-{data.uid}" style="{columnStyle} {vars} --plate-sticky-row-bg-notstuck:{backgroundColor}; --plate-sticky-row-bg-stuck:{stuckBackgroundColor}">
+                        <f:render section="RenderColumns" arguments="{_all}"/>
+                    </div>
+                </div>
+            </f:case>
+            <f:defaultCase>
+                <div class="@container {containerClass}" style="{containerVars}">
+                    <div class="d-grid" style="{columnStyle}" id="pl-lce-grid-{data.uid}">
+                        <f:render section="RenderColumns" arguments="{_all}"/>
+                    </div>
+                </div>
+            </f:defaultCase>
+        </f:switch>
+
+        <f:render section="GridStyles" arguments="{_all}"/>
+    </f:section>
+
+    <f:section name="RenderColumns">
+        <f:variable name="col1Vars" value=""/>
+        <f:if condition="{col1AlignMobile}"><f:variable name="col1Vars" value="{col1Vars} --pl-lce-mobile-align-items: {col1AlignMobile};"/></f:if>
+        <f:if condition="{col1AlignTablet}"><f:variable name="col1Vars" value="{col1Vars} --pl-lce-tablet-align-items: {col1AlignTablet};"/></f:if>
+        <f:if condition="{col1Align}"><f:variable name="col1Vars" value="{col1Vars} --pl-lce-align-items: {col1Align};"/></f:if>
+        <f:if condition="{col1Justify}"><f:variable name="col1Vars" value="{col1Vars} --pl-lce-desktop-justify-content: {col1Justify};"/></f:if>
+        <f:if condition="{col1JustifyMobile}"><f:variable name="col1Vars" value="{col1Vars} --pl-lce-mobile-justify-content: {col1JustifyMobile};"/></f:if>
+        <f:if condition="{col1JustifyTablet}"><f:variable name="col1Vars" value="{col1Vars} --pl-lce-tablet-justify-content: {col1JustifyTablet};"/></f:if>
+
+        <div class="@container pl-lce-col d-flex {col1Direction}" style="grid-area:col1;{col1Vars}">
+            {f:render(section: 'CeColumn', arguments: '{content: children_101, column: _columns.1,
+            breakpoint: _columns.breakpoint, collapse: collapse, colCount: colCount, align:col1Align}') -> f:if(condition: children_101)}
+        </div>
+    </f:section>
+
+    <f:section name="CeColumn">
+        <f:for each="{content}" as="record">
+            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: record)}
+        </f:for>
+    </f:section>
+
+    <f:section name="GridStyles">
+        <f:asset.css identifier="plate.layoutce-grid-styles{data.uid}">
+            <f:if condition="{colsMobile}">
+                @media (max-width: 767px){
+                #pl-lce-grid-<f:format.raw>{data.uid}</f:format.raw> {
+                grid-template-columns: <f:format.raw>{colsMobile}</f:format.raw> !important;
+                }
+                }
+            </f:if>
+            <f:if condition="{colsTablet}">
+                @media (min-width: 768px){
+                #pl-lce-grid-<f:format.raw>{data.uid}</f:format.raw> {
+                grid-template-columns: <f:format.raw>{colsTablet}</f:format.raw>!important;
+                }
+                }
+            </f:if>
+            <f:if condition="{colsDesktop}">
+                @media (min-width: 992px){
+                #pl-lce-grid-<f:format.raw>{data.uid}</f:format.raw> {
+                grid-template-columns: <f:format.raw>{colsDesktop}</f:format.raw>!important;
+                }
+                }
+            </f:if>
+            <f:if condition="{colAreasMobile}">
+                @media (max-width: 767px){
+                #pl-lce-grid-<f:format.raw>{data.uid}</f:format.raw> {
+                grid-template-areas: <f:format.raw>{colAreasMobile}</f:format.raw> !important;
+                }
+                }
+            </f:if>
+            <f:if condition="{colAreasTablet}">
+                @media (min-width: 768px){
+                #pl-lce-grid-<f:format.raw>{data.uid}</f:format.raw> {
+                grid-template-areas: <f:format.raw>{colAreasTablet}</f:format.raw>!important;
+                }
+                }
+            </f:if>
+            <f:if condition="{colAreasDesktop}">
+                @media (min-width: 992px){
+                #pl-lce-grid-<f:format.raw>{data.uid}</f:format.raw> {
+                grid-template-areas: <f:format.raw>{colAreasDesktop}</f:format.raw>!important;
+                }
+                }
+            </f:if></f:asset.css>
+    </f:section>
+
+</fluid>

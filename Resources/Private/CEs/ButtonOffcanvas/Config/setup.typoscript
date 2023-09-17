@@ -1,0 +1,21 @@
+
+tt_content.tx_plate_layoutces_buttonoffcanvas= COA
+tt_content.tx_plate_layoutces_buttonoffcanvas {
+    10 =< lib.layoutCeDefault
+    10{
+        templateName = Template.html
+        templateRootPaths {
+            0 = EXT:plate_layoutces/Resources/Private/CEs/ButtonOffcanvas/
+        }
+        variables {
+            type = TEXT
+            type.data = flexform: pi_flexform:settings.type
+
+            btIcon = TEXT
+            btIcon.data = flexform: pi_flexform:settings.btIcon
+
+
+        }
+
+    }
+}

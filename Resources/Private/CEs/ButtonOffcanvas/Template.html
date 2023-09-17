@@ -1,0 +1,43 @@
+
+<fluid
+        data-namespace-typo3-fluid="true"
+        xmlns:f="http://typo3.org/ns/TYPO3Fluid/Fluid/ViewHelpers">
+
+    <f:layout name="LayoutCeDefault"/>
+
+    <f:section name="Header"></f:section>
+
+    <f:section name="Main">
+        <f:asset.script identifier="atomic-button" type="module" src="{atomicAssets}/Webcomponents/Dist/atomic-button.min.js"/>
+        <f:asset.script identifier="atomic-click" type="module" src="{atomicAssets}/Webcomponents/Dist/atomic-click.min.js"/>
+        <atomic-click target="#offcanvas1" method="{type}" class="a-absolute" style="right:0px; top:0px;">
+            <atomic-button transparent><f:comment>{_all}</f:comment>
+                <f:if condition="{btIcon}">
+                    <f:then>
+                        <f:variable name="iconData" value="{
+                            icon:btIcon,
+                            isFullColor: '',
+                            title:'open menu',
+                            alt:'open menu',
+                            width:40,
+                            height:40}"/>
+                        <f:render partial="Atoms/Icon" arguments="{data:iconData}"/>
+                    </f:then>
+                    <f:else>
+                        <svg width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 744.09 1052.4">
+                            <g id="layer1">
+                                <g id="g3763" transform="matrix(.91837 0 0 .91837 47.587 10.944)"
+                                    stroke="#000" stroke-linecap="round" stroke-width="133.87"
+                                    fill="none">
+                                    <path id="path2991" d="m176.51 362.87 356.13 356.13"/>
+                                    <path id="path2993" d="m532.64 362.87-356.13 356.13"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </f:else>
+                </f:if>
+            </atomic-button>
+        </atomic-click>
+    </f:section>
+
+</fluid>

@@ -1,0 +1,85 @@
+
+tt_content.tx_plate_layoutces_offcanvasnavigation= COA
+tt_content.tx_plate_layoutces_offcanvasnavigation {
+
+    // pages from selection
+    10 =< lib.layoutCeDefault
+    10{
+        templateName = Template.html
+        templateRootPaths {
+            0 = EXT:plate_layoutces/Resources/Private/CEs/OffcanvasNavigation/
+        }
+
+        variables{
+            navGap = TEXT
+            navGap.data = flexform: pi_flexform:settings.socialNavGap
+
+            l0FontSize = TEXT
+            l0FontSize.data = flexform: pi_flexform:settings.l0FontSize
+            l0StuckFontSize = TEXT
+            l0StuckFontSize.data = flexform: pi_flexform:settings.l0StuckFontSize
+            l1FontSize = TEXT
+            l1FontSize.data = flexform: pi_flexform:settings.l1FontSize
+
+            l0BackgroundColor = TEXT
+            l0BackgroundColor.data = flexform: pi_flexform:settings.l0BackgroundColor
+
+            l0IconColor = TEXT
+            l0IconColor {
+                data = flexform:pi_flexform:settings.l0IconColor
+                ifEmpty = --bs-primary
+            }
+            l0LinkColor = TEXT
+            l0LinkColor {
+                data = flexform:pi_flexform:settings.l0LinkColor
+                ifEmpty = --bs-primary
+            }
+            l0ButtonType = TEXT
+            l0ButtonType {
+                data = flexform:pi_flexform:settings.l0ButtonType
+                ifEmpty = transparent
+            }
+            l1ButtonType = TEXT
+            l1ButtonType {
+                data = flexform:pi_flexform:settings.l1ButtonType
+                ifEmpty = transparent
+            }
+
+            l1BackgroundColor = TEXT
+            l1BackgroundColor.data = flexform: pi_flexform:settings.l1BackgroundColor
+            l1IconColor = TEXT
+            l1IconColor {
+                data = flexform:pi_flexform:settings.l1IconColor
+                ifEmpty = --bs-primary
+            }
+            l1LinkColor = TEXT
+            l1LinkColor {
+                data = flexform:pi_flexform:settings.l1LinkColor
+                ifEmpty = --bs-primary
+            }
+
+            dropdownIcon = TEXT
+            dropdownIcon.data = flexform: pi_flexform:settings.dropdownIcon
+
+            homeLinkTrue = TEXT
+            homeLinkTrue.data = flexform: pi_flexform:settings.homeLinkTrue
+            homeLinkIsIcon = TEXT
+            homeLinkIsIcon.data = flexform: pi_flexform:settings.homeLinkIsIcon
+            homeIcon = TEXT
+            homeIcon.data = flexform: pi_flexform:settings.homeIcon
+
+            navEntryId = TEXT
+            navEntryId.data = flexform: pi_flexform:settings.navEntryId
+            navEntryId.ifEmpty.data = site:rootPageId
+        }
+
+        dataProcessing {
+            120 = B13\Menus\DataProcessing\TreeMenu
+            120.entryPoints.data = flexform: pi_flexform:settings.navEntryId
+            120.entryPoints.ifEmpty.data = site:rootPageId
+            120.depth = 4
+            120.as = mainNavigation
+        }
+    }
+
+}

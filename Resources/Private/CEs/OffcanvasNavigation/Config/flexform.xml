@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Einstellungen</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.navEntryId>
+                        <TCEforms>
+                            <label>Id Menü</label>
+                            <config>
+                                <type>input</type>>
+                            </config>
+                        </TCEforms>
+                    </settings.navEntryId>
+                    <settings.dropdownIcon>
+                        <TCEforms>
+                            <label>Dropdown Icon</label>
+                            <config>
+                                <type>input</type>>
+                                <renderType>iconSelection</renderType>
+                            </config>
+                        </TCEforms>
+                    </settings.dropdownIcon>
+                    <settings.navGap>
+                        <TCEforms>
+                            <label>Navi - Abstände</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Sehr klein</numIndex>
+                                        <numIndex index="1">gap-xsmall</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Klein</numIndex>
+                                        <numIndex index="1">gap-small</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">Medium</numIndex>
+                                        <numIndex index="1">gap-medium</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">Groß</numIndex>
+                                        <numIndex index="1">gap-big</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">Sehr groß</numIndex>
+                                        <numIndex index="1">gap-large</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">XL</numIndex>
+                                        <numIndex index="1">gap-xlarge</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7" type="array">
+                                        <numIndex index="0">XXL</numIndex>
+                                        <numIndex index="1">gap-xxlarge</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.navGap>
+                </el>
+            </ROOT>
+        </sDEF>
+        <level0>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>L0 Buttons</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.l0BackgroundColor>
+                        <TCEforms>
+                            <label>Hintergrund</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l0BackgroundColor>
+                    <settings.l0ButtonType>
+                        <TCEforms>
+                            <label>Buttonart</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Button</numIndex>
+                                        <numIndex index="1">isButton</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Link</numIndex>
+                                        <numIndex index="1">transparent</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.l0ButtonType>
+                    <settings.l0IconColor>
+                        <TCEforms>
+                            <label>Icon Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l0IconColor>
+                    <settings.l0LinkColor>
+                        <TCEforms>
+                            <label>Schrift Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.l0LinkColor>
+                    <settings.l0FontSize>
+                        <TCEforms>
+                            <label>Schriftgröße</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Sehr klein</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:1rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Klein</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:1.2rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">Medium</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:1.5rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">Groß</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize2rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">Sehr groß</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:3rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">XL</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:4rem;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7" type="array">
+                                        <numIndex index="0">XXL</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:5rem;</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.l0FontSize>
+                </el>
+            </ROOT>
+        </level0>
+        <level1>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>L1 Buttons</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.l1BackgroundColor>
+                        <TCEforms>
+                            <label>Hintergrund</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Primary</numIndex>
+                                        <numIndex index="1">--atomic-button-background:var(--bs-primary,darkblue);</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Secondary</numIndex>
+                                        <numIndex index="1">--atomic-button-background:var(--bs-secodary,orange);</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">Black</numIndex>
+                                        <numIndex index="1">--atomic-button-background:black;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">White</numIndex>
+                                        <numIndex index="1">--atomic-button-background:white;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">Dark</numIndex>
+                                        <numIndex index="1">--atomic-button-background:var(--bs-dark,dark);</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">Light</numIndex>
+                                        <numIndex index="1">--atomic-button-background:var(--bs-light,#eee);</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7" type="array">
+                                        <numIndex index="0">Transparent</numIndex>
+                                        <numIndex index="1">--atomic-button-background:transparent;</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.l1BackgroundColor>
+                    <settings.l1ButtonType>
+                        <TCEforms>
+                            <label>Buttonart</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Button</numIndex>
+                                        <numIndex index="1">isButton</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Link</numIndex>
+                                        <numIndex index="1">transparent</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.l1ButtonType>
+                    <settings.l1IconColor>
+                        <TCEforms>
+                            <label>Icon Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Primär</numIndex>
+                                        <numIndex index="1">--bs-primary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Sekundär</numIndex>
+                                        <numIndex index="1">--bs-secondary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">tertiär</numIndex>
+                                        <numIndex index="1">--bs-tertiary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">quaternär</numIndex>
+                                        <numIndex index="1">--bs-quaternary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">Hell</numIndex>
+                                        <numIndex index="1">--bs-light</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">Dunkel</numIndex>
+                                        <numIndex index="1">--bs-dark</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7" type="array">
+                                        <numIndex index="0">Keine</numIndex>
+                                        <numIndex index="1">--bs-none</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.l1IconColor>
+                    <settings.l1LinkColor>
+                        <TCEforms>
+                            <label>Icon Farbe</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Primär</numIndex>
+                                        <numIndex index="1">--bs-primary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Sekundär</numIndex>
+                                        <numIndex index="1">--bs-secondary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">tertiär</numIndex>
+                                        <numIndex index="1">--bs-tertiary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">quaternär</numIndex>
+                                        <numIndex index="1">--bs-quaternary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">Hell</numIndex>
+                                        <numIndex index="1">--bs-light</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">Dunkel</numIndex>
+                                        <numIndex index="1">--bs-dark</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7" type="array">
+                                        <numIndex index="0">Keine</numIndex>
+                                        <numIndex index="1">--bs-none</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.l1LinkColor>
+                    <settings.l1FontSize>
+                        <TCEforms>
+                            <label>Schriftgröße</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Standard</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Sehr klein</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:1rem</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Klein</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:1.2rem</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">Medium</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:1.5rem</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">Groß</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize2rem</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">Sehr groß</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:3rem</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">XL</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:4rem</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7" type="array">
+                                        <numIndex index="0">XXL</numIndex>
+                                        <numIndex index="1">--plate-nav-l0-fontsize:5rem</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.l1FontSize>
+                </el>
+            </ROOT>
+        </level1>
+        <home>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Home Link</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.homeLinkTrue>
+                        <TCEforms>
+                            <label>Home link anzeigen</label>
+                            <config>
+                                <type>check</type>>
+                                <default>true</default>
+                            </config>
+                        </TCEforms>
+                    </settings.homeLinkTrue>
+                    <settings.homeLinkIsIcon>
+                        <TCEforms>
+                            <label>Home link als Icon</label>
+                            <config>
+                                <type>check</type>>
+                                <default>true</default>
+                            </config>
+                        </TCEforms>
+                    </settings.homeLinkIsIcon>
+                    <settings.homeIcon>
+                        <TCEforms>
+                            <label>Home als Icon</label>
+                            <config>
+                                <type>input</type>>
+                                <renderType>iconSelection</renderType>
+                            </config>
+                        </TCEforms>
+                    </settings.homeIcon>
+                </el>
+            </ROOT>
+        </home>
+    </sheets>
+</T3DataStructure>

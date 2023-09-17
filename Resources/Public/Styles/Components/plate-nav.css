@@ -1,0 +1,42 @@
+.pl-nav atomic-dropdown:not(:defined){
+    display:none;
+}
+.pl-nav > ul{
+    display: flex;
+    margin: 0;
+    gap: var(--plate-nav-l0-gap, 0) !important;
+}
+.pl-nav.-vertical > ul{
+    flex-direction: column;
+}
+.pl-nav li{list-style-type: none;}
+.pl-nav atomic-dropdown{
+    --atomic-dropdown-content-background: var(--plate-nav-l1-background, transparent) !important;
+}
+.pl-nav-link.-l0{
+    color: var(--plate-nav-l0-color, white);
+    background: var(--plate-nav-l0-background, transparent);
+}
+.pl-nav-link.-l0 > atomic-button{
+    font-size: var(--plate-nav-l0-fontsize, inherit);
+    --atomic-button-color: var(--plate-nav-l0-color, white);
+    --atomic-button-background: var(--plate-nav-l0-btn-background, var(--bs-primary));
+    --atomic-button-background-hover: var(--plate-nav-l0-btn-hover-background, transparent);
+    transition: font-size 0.25s ease-in-out;
+    --vars-icon-size: var(--pl-nav-link-l0-iconsize, inherit);
+}
+[stuck] .pl-nav-link.-l0 > atomic-button{
+    font-size: var(--plate-nav-l0-stuck-fontsize, inherit);
+}
+.pl-subnav{
+    display: flex;
+    flex-direction: column;
+    gap: var(--plate-nav-l1-gap, 0) !important;
+}
+.pl-nav-link.-l1 > atomic-button{
+    font-size: var(--plate-nav-l1-fontsize, inherit);
+    --atomic-button-color: var(--plate-nav-l1-color, white) !important;
+    --atomic-button-background: var(--plate-nav-l1-btn-background, var(--bs-primary));
+    --atomic-button-background-hover: var(--plate-nav-l1-btn-hover-background, transparent);
+    --vars-icon-size: var(--pl-nav-link-l1-iconsize, inherit);
+}

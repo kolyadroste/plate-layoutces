@@ -1,0 +1,137 @@
+
+tt_content.tx_plate_layoutces_mainnavigation= COA
+tt_content.tx_plate_layoutces_mainnavigation {
+
+    // pages from selection
+    10 =< lib.layoutCeDefault
+    10{
+        templateName = Template.html
+        templateRootPaths {
+            0 = EXT:plate_layoutces/Resources/Private/CEs/MainNavigation/
+        }
+
+        variables{
+            navL0Gap = TEXT
+            navL0Gap.data = flexform: pi_flexform:settings.navL0Gap
+
+            l0FontSize = TEXT
+            l0FontSize.data = flexform: pi_flexform:settings.l0FontSize
+            l0StuckFontSize = TEXT
+            l0StuckFontSize.data = flexform: pi_flexform:settings.l0StuckFontSize
+            l1FontSize = TEXT
+            l1FontSize.data = flexform: pi_flexform:settings.l1FontSize
+
+            l0BackgroundColor = TEXT
+            l0BackgroundColor.data = flexform: pi_flexform:settings.l0BackgroundColor
+            l0BackgroundColor.ifEmpty =
+            l0IconColor = TEXT
+            l0IconColor {
+                data = flexform:pi_flexform:settings.l0IconColor
+                ifEmpty = --bs-primary
+            }
+            l0LinkColor = TEXT
+            l0LinkColor {
+                data = flexform:pi_flexform:settings.l0LinkColor
+                ifEmpty = --bs-primary
+            }
+            l0ButtonColor = TEXT
+            l0ButtonColor {
+                data = flexform:pi_flexform:settings.l0ButtonColor
+                ifEmpty = --bs-primary
+            }
+            l0LinkHoverColor = TEXT
+            l0LinkHoverColor {
+                data = flexform:pi_flexform:settings.l0LinkHoverColor
+                ifEmpty = --bs-primary-hover
+            }
+            l0ButtonHoverColor = TEXT
+            l0ButtonHoverColor {
+                data = flexform:pi_flexform:settings.l0ButtonHoverColor
+                ifEmpty = --bs-primary-hover
+            }
+            l0LinkType = TEXT
+            l0LinkType {
+                data = flexform:pi_flexform:settings.l0LinkType
+                ifEmpty = transparent
+            }
+            showL1Thumbnails = TEXT
+            showL1Thumbnails {
+                data = flexform:pi_flexform:settings.showL1Thumbnails
+                ifEmpty = 0
+            }
+            l1LinkType = TEXT
+            l1LinkType {
+                data = flexform:pi_flexform:settings.l1LinkType
+                ifEmpty = transparent
+            }
+            navL1Gap = TEXT
+            navL1Gap.data = flexform: pi_flexform:settings.navL1Gap
+            l1BackgroundColor = TEXT
+            l1BackgroundColor.data = flexform: pi_flexform:settings.l1BackgroundColor
+            l1IconColor = TEXT
+            l1IconColor {
+                data = flexform:pi_flexform:settings.l1IconColor
+                ifEmpty = --bs-primary
+            }
+            l1LinkColor = TEXT
+            l1LinkColor {
+                data = flexform:pi_flexform:settings.l1LinkColor
+                ifEmpty = --bs-primary
+            }
+            l1ButtonColor = TEXT
+            l1ButtonColor {
+                data = flexform:pi_flexform:settings.l1ButtonColor
+                ifEmpty = --bs-primary
+            }
+            l1LinkHoverColor = TEXT
+            l1LinkHoverColor {
+                data = flexform:pi_flexform:settings.l1LinkHoverColor
+                ifEmpty = --bs-primary-hover
+            }
+            l1ButtonHoverColor = TEXT
+            l1ButtonHoverColor {
+                data = flexform:pi_flexform:settings.l1ButtonHoverColor
+                ifEmpty = --bs-primary-hover
+            }
+
+
+            dropdownIcon = TEXT
+            dropdownIcon.data = flexform: pi_flexform:settings.dropdownIcon
+
+            homeLinkTrue = TEXT
+            homeLinkTrue.data = flexform: pi_flexform:settings.homeLinkTrue
+            homeLinkIsIcon = TEXT
+            homeLinkIsIcon.data = flexform: pi_flexform:settings.homeLinkIsIcon
+            homeIcon = TEXT
+            homeIcon.data = flexform: pi_flexform:settings.homeIcon
+
+            navEntryId = TEXT
+            navEntryId.data = flexform: pi_flexform:settings.navEntryId
+            navEntryId.ifEmpty.data = site:rootPageId
+        }
+
+        dataProcessing {
+            120 = B13\Menus\DataProcessing\TreeMenu
+            120{
+                entryPoints.data = flexform: pi_flexform:settings.navEntryId
+                entryPoints.ifEmpty.data = site:rootPageId
+                depth = 4
+                as = mainNavigation
+                dataProcessing{
+                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    10 {
+                        references.fieldName = media
+                        references.table = pages
+                        as = image
+                    }
+                }
+
+            }
+            130 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
+            130 {
+                as = site
+            }
+        }
+    }
+
+}

@@ -1,0 +1,138 @@
+<fluid
+        data-namespace-typo3-fluid="true"
+        xmlns:f="http://typo3.org/ns/TYPO3Fluid/Fluid/ViewHelpers">
+
+    <f:layout name="LayoutCeDefault"/>
+
+    <f:section name="LayoutVars">
+        <f:variable name="wrapperTag" value="header"/>
+        <f:variable name="sticky"
+                    value="{f:if(condition:flexform.settings.isSticky, then:'navbar-top fixed-top navbar-fixed-top bg-white')}"/>
+        <f:variable name="additionalClasses" value="vars-dark vars-inverted a-background{sticky}"/>
+    </f:section>
+
+    <f:section name="Main">
+        <f:asset.css identifier="bs.dropdown" href="{atomicBs}/components/dropdown.css"/>
+        <f:asset.css identifier="bs.helpers.position" href="{atomicBs}/helpers/position.css"/>
+        <f:asset.css identifier="bs.navbar" href="{atomicBs}/components/navbar.css"/>
+        <f:asset.css identifier="bs.transitions" href="{atomicBs}/components/transitions.css" priority="1"/>
+        <f:asset.css identifier="bs.utilities.base" href="{atomicBs}/utilities-container/utilities.base.css" priority="1"/>
+        <f:asset.script identifier="bs.stickyheader" src="{bsPublic}/JavaScript/Dist/bootstrap.stickyheader.min.js"/>
+        <f:variable name="headerClass">bp-page-header navbar navbar-mainnavigation navbar-{theme.navigation.style}</f:variable>
+        <f:variable name="headerClass">{headerClass}{f:if(condition: logo.normal, then:' navbar-has-image')}</f:variable>
+        <f:variable name="headerClass">{headerClass}{f:if(condition: theme.navigation.type, else:' navbar-top', then:' navbar-{theme.navigation.type} navbar-fixed-{theme.navigation.type}')}</f:variable>
+        <div id="page-header" class="{headerClass}">
+            <div class="container">
+                <f:render partial="Header/Logo" arguments="{_all}" />
+                <f:if condition="{mainnavigation}">
+                    <f:render partial="Header/Toggle" arguments="{_all}" />
+                    <nav id="mainnavigation" class="collapse navbar-collapse">
+                        <f:render partial="DropIn/Navigation/MainBefore" arguments="{_all}" />
+                        <f:render partial="Navigation/MainNavigation" arguments="{_all}" />
+                        <f:render partial="DropIn/Navigation/MainAfter" arguments="{_all}" />
+                    </nav>
+                </f:if>
+            </div>
+        </div>
+
+    </f:section>
+    <f:section name="Main2">
+        <f:if condition="{flexform.settings.isSticky}">
+
+        </f:if>
+        <f:asset.script identifier="atomic-container-query" type="module"
+                        src="{atomicAssets}/Webcomponents/Dist/atomic-container-query.min.js" priority="1"/>
+        <f:asset.script identifier="atomic-top-bar" type="module"
+                        src="{atomicAssets}/Webcomponents/Dist/atomic-top-bar.min.js" priority="1"/>
+        <f:asset.script identifier="atomic-click" type="module"
+                        src="{atomicAssets}/Webcomponents/Dist/atomic-click.min.js" priority="1"/>
+
+        <f:variable name="logoWidth" value="200"/>
+        <f:if condition="{flexform.settings.logoWidth}">
+            <f:variable name="logoWidth" value="{flexform.settings.logoWidth}"/>
+        </f:if>
+
+        <div class="wrapper ah-container ah-container::default vars-dark">
+            <atomic-top-bar class="a-padding-top a-padding-bottom a-align-items::center">
+                <f:if condition="{logo->f:count()} && {logo.0}">
+                    <f:then>
+                        <a slot="left" href="{f:uri.page(pageUid: '{site.rootPageId}')}" title="" id="logo">
+                            <f:image image="{logo.0}" width="{logoWidth}"/>
+                        </a>
+                    </f:then>
+                    <f:else>
+                        <div slot="left"><a href="/" target="_self" style="font-size:2em">{data.header}</a></div>
+                    </f:else>
+                </f:if>
+
+                <div slot="right" class="rightNav nav">
+                    <div class="a-text-align::right">
+                        <f:variable name="smallNavConfig" value="{
+                            atomicAssets:atomicAssets,
+                            items:additionalLinks,
+                            gap: smallNavGap
+                            }"/>
+                        <f:render partial="Molecules/Navigation/SmallNav"
+                                  arguments="{data:smallNavConfig,atomicAssets:atomicAssets}"/>
+                    </div>
+                </div>
+            </atomic-top-bar>
+        </div>
+        <f:if condition="{mainnav}">
+            <div class="mainNavRow ah-gradient vars-inverted">
+                <div class="wrapper ah-container ah-container::default">
+                    <f:render partial="Molecules/Navigation/MainNav" arguments="{_all}"/>
+                    <f:render section="MobileMenu" arguments="{_all}"/>
+                </div>
+            </div>
+        </f:if>
+
+
+    </f:section>
+
+    <f:section name="TopBar">
+        <f:if condition='{flexform.settings.telephone} != "" || {flexform.settings.email} != ""'>
+            <address class="a-flex a-padding::small::childs vars-shy">
+                <atomic-button transparent>{flexform.settings.telephone}</atomic-button>
+                <atomic-button transparent>{flexform.settings.email}</atomic-button>
+            </address>
+        </f:if>
+
+        <f:if condition="{topnav}">
+            <nav class="a-flex ::flex-items-right --valign-items-center a-nav --secondary vars-shy">
+                <f:for each="{topnav}" as="entry">
+                    <li class="a-line-height::1">
+                        <f:switch expression="{entry.uid}">
+                            <f:defaultCase>
+                                <atomic-button transparent>
+                                    <f:link.typolink parameter="{entry.uid}" title="{entry.title}">{entry.title}
+                                    </f:link.typolink>
+                                </atomic-button>
+                            </f:defaultCase>
+                        </f:switch>
+                    </li>
+                </f:for>
+            </nav>
+        </f:if>
+    </f:section>
+
+    <f:section name="MobileMenu">
+        <div class="mobile-nav-button a-display::none mdd(a-display::block) a-float::right">
+            <atomic-click target="atomic-offcanvas" method="open" style="margin-right:-30px;">
+                <atomic-button transparent>
+                    <span style="margin-right:10px">Navigation</span>
+                    <svg slot="after" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                         width="30"
+                         viewBox="0 0 283.426 283.426" style="enable-background:new 0 0 283.426 283.426;"
+                         xml:space="preserve">
+                                    <g>
+                                    <rect x="0" y="40.84" style="fill:white;" width="283.426" height="47.735"/>
+                                        <rect x="0" y="117.282" style="fill:white;" width="283.426" height="47.735"/>
+                                        <rect x="0" y="194.851" style="fill:white;" width="283.426" height="47.735"/>
+                                    </g>
+                                </svg>
+                </atomic-button>
+            </atomic-click>
+        </div>
+    </f:section>
+</fluid>

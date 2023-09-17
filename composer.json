@@ -1,0 +1,32 @@
+{
+	"name": "atomicplan/plate-layoutces",
+	"version": "0.5.0",
+	"type": "typo3-cms-extension",
+	"description": "Plate Layout Ces - Provide a set of layout contentelements",
+	"license": "GPL-2.0-or-later",
+	"keywords": ["TYPO3 CMS", "Integrators", "Site Extension", "Site Package", "TypoScript"],
+	"require": {
+		"php": "^7.4 || ^8.0",
+		"typo3/cms-core": "^11.0 || ^12.0",
+		"atomicplan/plate-atomic-assets": "^0.5",
+		"atomicplan/plate-ttc-additions": "^0.5",
+		"b13/container": "^2.0",
+		"b13/menus": "^1.0"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "plate_layoutces"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"Atomicplan\\PlateLayoutCes\\": "Classes/"
+		}
+	},
+	"require-dev": {
+
+	},
+	"config": {
+		"sort-packages": true
+	}
+}

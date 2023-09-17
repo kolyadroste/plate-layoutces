@@ -1,0 +1,71 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:spaceless>
+		<f:render section="LayoutVars" arguments="{_all}" optional="true"/>
+		<f:variable name="tag" value="div"/>
+		<f:variable name="closeTag" value="/div"/>
+
+		<f:switch expression="{data.space_before_class}">
+			<f:case value="extra-small"><f:variable name="spaceBeforeClass" value=" mt-xsmall"/></f:case>
+			<f:case value="small"><f:variable name="spaceBeforeClass" value=" mt-small"/></f:case>
+			<f:case value="medium"><f:variable name="spaceBeforeClass" value=" mt-medium"/></f:case>
+			<f:case value="large"><f:variable name="spaceBeforeClass" value=" mt-big"/></f:case>
+			<f:case value="extra-large"><f:variable name="spaceBeforeClass" value=" mt-xlarge"/></f:case>
+			<f:defaultCase></f:defaultCase>
+		</f:switch>
+		<f:switch expression="{data.space_after_class}">
+			<f:case value="extra-small"><f:variable name="spaceAfterClass" value=" mb-xsmall"/></f:case>
+			<f:case value="small"><f:variable name="spaceAfterClass" value=" mb-small"/></f:case>
+			<f:case value="medium"><f:variable name="spaceAfterClass" value=" mb-medium"/></f:case>
+			<f:case value="large"><f:variable name="spaceAfterClass" value=" mb-big"/></f:case>
+			<f:case value="extra-large"><f:variable name="spaceAfterClass" value=" mb-xlarge"/></f:case>
+			<f:defaultCase></f:defaultCase>
+		</f:switch>
+
+		<f:asset.css identifier="plate.lce-wrapper" href="EXT:plate_layoutces/Resources/Public/Styles/Components/plate.lce-wrapper.css"/>
+
+		<{tag} class="pl-lce {spaceBeforeClass}{spaceAfterClass} {tplInjectedClasses}" id="c{data.uid}" style="{tplInjectedVars}">
+		<f:comment>{data}</f:comment>
+			<f:render section="Main" arguments="{_all}"/>
+			<f:if condition="!{data.tx_plate_layoutces_showatxs} || !{data.tx_plate_layoutces_showatsm} || !{data.tx_plate_layoutces_showatmd} || !{data.tx_plate_layoutces_showatlg} || !{data.tx_plate_layoutces_showatxl}">
+				<f:asset.css identifier="plate.layoutce{data.uid}"><f:spaceless>
+						<f:if condition="!{data.tx_plate_layoutces_showatxs}">
+
+							@media (max-width: {data.tx_plate_layoutces_smbp}px){
+								#c{data.uid} {
+									display: none;
+								}
+							}
+						</f:if>
+						<f:if condition="!{data.tx_plate_layoutces_showatsm}">
+							@media (min-width: {data.tx_plate_layoutces_smbp}px) and (max-width: {data.tx_plate_layoutces_mdbp}px){
+									#c{data.uid} {
+									display: none;
+									}
+							}
+						</f:if>
+						<f:if condition="!{data.tx_plate_layoutces_showatmd}">
+							@media (min-width: {data.tx_plate_layoutces_mdbp}px) and (max-width: {data.tx_plate_layoutces_lgbp}px){
+								#c{data.uid} {
+									display: none;
+								}
+							}
+						</f:if>
+						<f:if condition="!{data.tx_plate_layoutces_showatlg}">
+							@media (min-width: {data.tx_plate_layoutces_lgbp}px) and (max-width: 1400px){
+								#c{data.uid} {
+									display: none;
+								}
+							}
+						</f:if>
+						<f:if condition="!{data.tx_plate_layoutces_showatxl}">
+							@media (min-width: {data.tx_plate_layoutces_xlbp}px){
+								#c{data.uid} {
+									display: none;
+								}
+							}
+						</f:if>
+				</f:spaceless></f:asset.css>
+			</f:if>
+		<{closeTag}>
+	</f:spaceless>
+</html>

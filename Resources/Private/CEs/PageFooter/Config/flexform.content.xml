@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Einstellungen</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.textFirstRow>
+                        <TCEforms>
+                            <label>Text erste Zeile</label>
+                            <config>
+                                <type>input</type>>
+                            </config>
+                        </TCEforms>
+                    </settings.textFirstRow>
+                    <settings.textSecondRowLeft>
+                        <TCEforms>
+                            <label>Text Zeile 2 > links</label>
+                            <config>
+                                <type>text</type>
+                                <enableRichtext>1</enableRichtext>
+                            </config>
+                        </TCEforms>
+                    </settings.textSecondRowLeft>
+                    <settings.textSecondRowCenter>
+                        <TCEforms>
+                            <label>Text Zeile 2 > mitte</label>
+                            <config>
+                                <type>text</type>
+                                <enableRichtext>1</enableRichtext>
+                            </config>
+                        </TCEforms>
+                    </settings.textSecondRowCenter>
+                    <settings.textSecondRowRight>
+                        <TCEforms>
+                            <label>Text Zeile 2 > rechts</label>
+                            <config>
+                                <type>text</type>
+                                <enableRichtext>1</enableRichtext>
+                            </config>
+                        </TCEforms>
+                    </settings.textSecondRowRight>
+                    <settings.textThirdRowCopyright>
+                        <TCEforms>
+                            <label>Text Zeile 3 > Copyright</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.textThirdRowCopyright>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

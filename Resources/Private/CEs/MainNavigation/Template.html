@@ -1,0 +1,62 @@
+<fluid
+        data-namespace-typo3-fluid="true"
+        xmlns:f="http://typo3.org/ns/TYPO3Fluid/Fluid/ViewHelpers"
+>
+    <f:layout name="LayoutCeDefault"/>
+
+    <f:section name="LayoutVars">
+        <f:variable name="tplInjectedClasses" value="plate-mainNavigation-wrapper"/>
+    </f:section>
+
+
+    <f:section name="Main">
+        <f:comment>{_all}</f:comment>
+        <f:asset.css identifier="plate.nav" href="EXT:plate_layoutces/Resources/Public/Styles/Components/plate-nav.css"/>
+        <f:asset.css identifier="plate.mainNavigation" href="EXT:plate_layoutces/Resources/Public/Styles/MainNavigation.css"/>
+
+        <f:variable name="vars" value=""/>
+        <f:if condition="{navL0Gap}"><f:variable name="vars" value="{vars} --plate-nav-l0-gap:var({navL0Gap});"/></f:if>
+        <f:if condition="{navL1Gap}"><f:variable name="vars" value="{vars} --plate-nav-l1-gap:var({navL1Gap});"/></f:if>
+
+        <f:if condition="{l0FontSize}"><f:variable name="vars" value="{vars} {l0FontSize}"/></f:if>
+        <f:if condition="{l0StuckFontSize}"><f:variable name="vars" value="{vars} {l0StuckFontSize}"/></f:if>
+        <f:if condition="{l0BackgroundColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-background:var({l0BackgroundColor});"/></f:if>
+        <f:if condition="{l0IconColor}"><f:variable name="vars" value="{vars} --bs-icon-color:var({l0IconColor}) !important;"/></f:if>
+        <f:if condition="{l0LinkColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-color:var({l0LinkColor}) !important; --bs-link-color:var({l0LinkColor});"/></f:if>
+        <f:if condition="{l0ButtonColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-btn-background:var({l0ButtonColor}) !important;"/></f:if>
+        <f:if condition="{l0ButtonHoverColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-btn-hover-background:var({l0ButtonHoverColor}) !important;"/></f:if>
+        <f:if condition="{l0LinkHoverColor}"><f:variable name="vars" value="{vars} --bs-link-hover-color:var({l0LinkHoverColor});"/></f:if>
+
+        <f:if condition="{l1FontSize}"><f:variable name="vars" value="{vars} {l1FontSize};"/></f:if>
+        <f:if condition="{l1StuckFontSize}"><f:variable name="vars" value="{vars} {l1StuckFontSize}"/></f:if>
+        <f:if condition="{l1BackgroundColor}"><f:variable name="vars" value="{vars} --plate-nav-l1-background:var({l1BackgroundColor});"/></f:if>
+        <f:if condition="{l1IconColor}"><f:variable name="vars" value="{vars} --bs-icon-color:var({l1IconColor});"/></f:if>
+        <f:if condition="{l1LinkColor}"><f:variable name="vars" value="{vars} --plate-nav-l1-color:var({l1LinkColor}); --bs-link-color:var({l1LinkColor});"/></f:if>
+        <f:if condition="{l1ButtonColor}"><f:variable name="vars" value="{vars} --plate-nav-l1-btn-background:var({l0ButtonColor}) !important;"/></f:if>
+        <f:if condition="{l1ButtonHoverColor}"><f:variable name="vars" value="{vars} --plate-nav-l1-btn-hover-background:var({l1ButtonHoverColor});"/></f:if>
+        <f:if condition="{l1LinkHoverColor}"><f:variable name="vars" value="{vars} --bs-l1button-hover-color:var({l1LinkHoverColor});"/></f:if>
+
+        <div class="plate-mainNavigation" style="{vars}">
+            <f:if condition="{homeLinkTrue}">
+                <f:then><f:variable name="homeLink" value="{f:uri.page(pageUid:site.rootPageId)}"/></f:then>
+                <f:else><f:variable name="homeLink" value=""/></f:else>
+            </f:if>
+            <f:comment >{homeLink}</f:comment>
+            <f:variable name="navConfig" value="{
+                nav:mainNavigation,
+                homeLinkTrue: homeLinkTrue,
+                homeLink: homeLink,
+                homeLinkIsIcon: homeLinkIsIcon,
+                homeIcon: homeIcon,
+                dropdownIcon: dropdownIcon,
+                l0ButtonType: l0LinkType,
+                l1ButtonType: l1LinkType,
+                showL1Thumbnails: showL1Thumbnails
+            }"/>
+            <f:render partial="Molecules/Navigation/MainNav" arguments="{data:navConfig}" />
+        </div>
+
+
+
+    </f:section>
+</fluid>

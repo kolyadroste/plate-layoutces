@@ -1,0 +1,63 @@
+.pl-lce.pllce-container{
+    width:100%;
+    background-color: var(--pl-lce-bgcolor, transparent);
+}
+.pl-lce.-colorized:not(.bg-color--bs-light){
+    --frame-color: #ffffff !important;
+    --frame-link-color: #eee !important;
+    --bs-link-color: #eee !important;
+    --bs-link-hover-color: #ccc !important;
+    --frame-link-hover-color: #ccc !important;
+    --bs-heading-color: #ffffff !important;
+}
+.pl-lce > .\@container.container{
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: var(--pl-lce-bgcolor, transparent);
+    box-shadow: var(--pl-lce-box-shadow, none);
+    padding-left: var(--pl-lce-ph, 0px) !important;
+    padding-right: var(--pl-lce-ph, 0px) !important;
+}
+.pl-lce.bgcolor-transition{
+    padding-top: var(--pl-lce-pv, 0px) !important;
+    padding-bottom: var(--pl-lce-pv, 0px) !important;
+}
+atomic-stickystate[stuck] .pl-lce.bgcolor-transition{
+    background-color: var(--pl-lce-stuck-bgcolor, transparent);
+    box-shadow: var(--pl-lce-stuck-box-shadow, none);
+    padding-top: var(--pl-lce-stuck-pv, 0px) !important;
+    padding-bottom: var(--pl-lce-stuck-pv, 0px) !important;
+}
+
+.pl-lce.bgcolor-transition > .\@container.container{
+    transition: background-color 0.3s ease-in-out;
+    padding-left: var(--pl-lce-stuck-ph, 0px) !important;
+    padding-right: var(--pl-lce-stuck-ph, 0px) !important;
+    background-color: var(--pl-lce-container-bgcolor, transparent);
+}
+atomic-stickystate[stuck] .pl-lce.bgcolor-transition > .\@container.container{
+    background-color: var(--pl-lce-stuck-container-bgcolor, transparent);
+    padding-left: var(--pl-lce-stuck-ph, 0px) !important;
+    padding-right: var(--pl-lce-stuck-ph, 0px) !important;
+    padding-top: var(--pl-lce-stuck-pv, 0px) !important;
+    padding-bottom: var(--pl-lce-stuck-pv, 0px) !important;
+}
+atomic-stickystate .pl-lce.bgcolor-transition > .\@container.container .\@container.container{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.pl-lce > .\@container.container > .d-grid > .pl-lce-col{
+    justify-content: var(--pl-lce-mobile-justify-content, center);
+    align-items: var(--pl-lce-mobile-align-items, center);
+}
+@media (min-width: 768px){
+    .pl-lce > .\@container.container > .d-grid > .pl-lce-col{
+        justify-content: var(--pl-lce-tablet-justify-content, center);
+        align-items: var(--pl-lce-tablet-align-items, center);
+    }
+}
+@media (min-width: 992px){
+    .pl-lce > .\@container.container > .d-grid > .pl-lce-col{
+        justify-content: var(--pl-lce-desktop-justify-content, center);
+        align-items: var(--pl-lce-desktop-align-items, center);
+    }
+}

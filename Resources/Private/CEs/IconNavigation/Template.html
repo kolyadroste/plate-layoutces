@@ -1,0 +1,37 @@
+<fluid
+        data-namespace-typo3-fluid="true"
+        xmlns:f="http://typo3.org/ns/TYPO3Fluid/Fluid/ViewHelpers">
+
+    <f:layout name="LayoutCeDefault"/>
+
+    <f:section name="LayoutVars">
+        <f:variable name="tplInjectedClasses" value="plate_ces_iconnavigation"/>
+    </f:section>
+
+    <f:section name="Main">
+        <f:if condition="{additionalLinks}">
+            <f:asset.css identifier="plate_layoutces.components.nav" href="EXT:plate_layoutces/Resources/Public/Styles/Components/plate-nav.css"/>
+            <f:if condition="{iconColor}">
+                <f:variable name="vars" value="--bs-icon-color:var({iconColor});"/>
+            </f:if>
+            <f:if condition="{linkColor}">
+                <f:variable name="vars" value="{vars} --atomic-button-color:var({linkColor}); --bs-link-color:var({linkColor}); --bs-link-hover-color:var({linkColor});"/>
+            </f:if>
+            <f:if condition="{buttonColor}">
+                <f:variable name="vars" value="{vars} --atomic-button-background:var({buttonColor}); "/>
+            </f:if>
+            <f:if condition="{navGap}">
+                <f:variable name="vars" value="{vars} --plate-nav-l0-gap:var({navGap}); "/>
+            </f:if>
+            <div class="plate-iconnav" style="{vars}">
+                <f:variable name="navConfig" value="{
+                        items:additionalLinks,
+                        navOrientation: navOrientation,
+                        navAlign: navAlign,
+                        linkOrientation: linkOrientation
+                    }"/>
+                <f:render partial="Molecules/Navigation/SmallNav" arguments="{data:navConfig}"/>
+            </div>
+        </f:if>
+    </f:section>
+</fluid>

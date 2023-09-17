@@ -1,0 +1,47 @@
+.stuck-hide{
+    transition: opacity 0.3s ease-in-out, max-height 0.7s ease-in-out;
+    max-height: 200px;
+    overflow: hidden;
+    padding: 0 !important;
+}
+atomic-stickystate[stuck] .stuck-hide {
+    opacity:0;
+    max-height:0;
+}
+.sticky{
+    position:sticky;
+    top:0;
+    z-index: 1011;
+}
+atomic-stickystate[stuck] .sticky-row{
+    background-color: var(--plate-sticky-row-bg-stuck, rgba(255, 0, 0, 0.9));
+}
+
+atomic-stickystate[stuck] .stuck-py-xsmall{
+    padding-top: var(--bs-gap-xsmall, 1rem) !important;
+    padding-bottom: var(--bs-gap-xsmall, 1rem) !important;
+}
+atomic-stickystate[stuck] .stuck-py-small{
+    padding-top: var(--bs-gap-small, 1rem) !important;
+    padding-bottom: var(--bs-gap-small, 1rem) !important;
+}
+atomic-stickystate[stuck] .stuck-py-medium{
+    padding-top: var(--bs-gap-default, 1rem) !important;
+    padding-bottom: var(--bs-gap-default, 1rem) !important;
+}
+atomic-stickystate[stuck] .stuck-py-big{
+    padding-top: var(--bs-gap-big, 1rem) !important;
+    padding-bottom: var(--bs-gap-big, 1rem) !important;
+}
+atomic-stickystate[stuck] .stuck-py-large{
+    padding-top: var(--bs-gap-large, 1rem) !important;
+    padding-bottom: var(--bs-gap-large, 1rem) !important;
+}
+atomic-stickystate[stuck] .stuck-py-xlarge{
+    padding-top: var(--bs-gap-xlarge, 1rem) !important;
+    padding-bottom: var(--bs-gap-xlarge, 1rem) !important;
+}
+atomic-stickystate[stuck] .stuck-py-xxlarge{
+    padding-top: var(--bs-gap-xxlarge, 1rem) !important;
+    padding-bottom: var(--bs-gap-xxlarge, 1rem) !important;
+}
