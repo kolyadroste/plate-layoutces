@@ -10,6 +10,7 @@
 		"typo3/cms-core": "^11.0 || ^12.0",
 		"atomicplan/plate-atomic-assets": "^0.5",
 		"atomicplan/plate-ttc-additions": "^0.5",
+		"atomicplan/plate-icon-provider": "^0.5",
 		"b13/container": "^2.0",
 		"b13/menus": "^1.0"
 	},
