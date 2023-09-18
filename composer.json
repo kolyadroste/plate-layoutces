@@ -1,6 +1,5 @@
 {
 	"name": "atomicplan/plate-layoutces",
-	"version": "0.5.0",
 	"type": "typo3-cms-extension",
 	"description": "Plate Layout Ces - Provide a set of layout contentelements",
 	"license": "GPL-2.0-or-later",
