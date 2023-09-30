@@ -26,44 +26,50 @@
 		<{tag} class="pl-lce {spaceBeforeClass}{spaceAfterClass} {tplInjectedClasses}" id="c{data.uid}" style="{tplInjectedVars}">
 		<f:comment>{data}</f:comment>
 			<f:render section="Main" arguments="{_all}"/>
-			<f:if condition="!{data.tx_plate_layoutces_showatxs} || !{data.tx_plate_layoutces_showatsm} || !{data.tx_plate_layoutces_showatmd} || !{data.tx_plate_layoutces_showatlg} || !{data.tx_plate_layoutces_showatxl}">
+			<f:if condition="!{data.tx_plate_layoutces_showatxs} || !{data.tx_plate_layoutces_showatsm} || !{data.tx_plate_layoutces_showatmd} || !{data.tx_plate_layoutces_showatlg} || !{data.tx_plate_layoutces_showatxl} || !{data.tx_plate_layoutces_showatxxl}">
 				<f:asset.css identifier="plate.layoutce{data.uid}"><f:spaceless>
-						<f:if condition="!{data.tx_plate_layoutces_showatxs}">
-
-							@media (max-width: {data.tx_plate_layoutces_smbp}px){
+					<f:if condition="!{data.tx_plate_layoutces_showatxs}">
+						@media (max-width: {data.tx_plate_layoutces_smbp}px){
+							#c{data.uid} {
+								display: none;
+							}
+						}
+					</f:if>
+					<f:if condition="!{data.tx_plate_layoutces_showatsm}">
+						@media (min-width: {data.tx_plate_layoutces_smbp}px) and (max-width: {data.tx_plate_layoutces_mdbp}px){
 								#c{data.uid} {
-									display: none;
+								display: none;
 								}
+						}
+					</f:if>
+					<f:if condition="!{data.tx_plate_layoutces_showatmd}">
+						@media (min-width: {data.tx_plate_layoutces_mdbp}px) and (max-width: {data.tx_plate_layoutces_lgbp}px){
+							#c{data.uid} {
+								display: none;
 							}
-						</f:if>
-						<f:if condition="!{data.tx_plate_layoutces_showatsm}">
-							@media (min-width: {data.tx_plate_layoutces_smbp}px) and (max-width: {data.tx_plate_layoutces_mdbp}px){
-									#c{data.uid} {
-									display: none;
-									}
+						}
+					</f:if>
+					<f:if condition="!{data.tx_plate_layoutces_showatlg}">
+						@media (min-width: {data.tx_plate_layoutces_lgbp}px) and (max-width: {data.tx_plate_layoutces_xlbp}px){
+							#c{data.uid} {
+								display: none;
 							}
-						</f:if>
-						<f:if condition="!{data.tx_plate_layoutces_showatmd}">
-							@media (min-width: {data.tx_plate_layoutces_mdbp}px) and (max-width: {data.tx_plate_layoutces_lgbp}px){
-								#c{data.uid} {
-									display: none;
-								}
+						}
+					</f:if>
+					<f:if condition="!{data.tx_plate_layoutces_showatxl}">
+						@media (min-width: {data.tx_plate_layoutces_xlbp}px) and (max-width: {data.tx_plate_layoutces_xxlbp}px){
+							#c{data.uid} {
+								display: none;
 							}
-						</f:if>
-						<f:if condition="!{data.tx_plate_layoutces_showatlg}">
-							@media (min-width: {data.tx_plate_layoutces_lgbp}px) and (max-width: 1400px){
-								#c{data.uid} {
-									display: none;
-								}
+						}
+					</f:if>
+					<f:if condition="!{data.tx_plate_layoutces_showatxxl}">
+						@media (min-width: {data.tx_plate_layoutces_xxlbp}px){
+							#c{data.uid} {
+								display: none;
 							}
-						</f:if>
-						<f:if condition="!{data.tx_plate_layoutces_showatxl}">
-							@media (min-width: {data.tx_plate_layoutces_xlbp}px){
-								#c{data.uid} {
-									display: none;
-								}
-							}
-						</f:if>
+						}
+					</f:if>
 				</f:spaceless></f:asset.css>
 			</f:if>
 		<{closeTag}>

@@ -18,7 +18,12 @@
         <f:if condition="{l0StuckFontSize}"><f:variable name="vars" value="{vars} {l0StuckFontSize}"/></f:if>
         <f:if condition="{l0BackgroundColor}"><f:variable name="vars" value="{vars} --atomic-button-background:var({l0BackgroundColor}, #eee);"/></f:if>
         <f:if condition="{l0IconColor}"><f:variable name="vars" value="{vars} --bs-icon-color:var({l0IconColor});"/></f:if>
-        <f:if condition="{l0LinkColor}"><f:variable name="vars" value="{vars} --bs-link-color:var({l0LinkColor}); --bs-link--hover-color:var({l0LinkColor})"/></f:if>
+        <f:if condition="{l0LinkColor}"><f:variable name="vars" value="{vars} --bs-link-color:var({l0LinkColor}); --plate-nav-l0-color:var({l0LinkColor}); --bs-link--hover-color:var({l0LinkColor})"/></f:if>
+        <f:if condition="{l1FontSize}"><f:variable name="vars" value="{vars} {l1FontSize}"/></f:if>
+        <f:if condition="{l1StuckFontSize}"><f:variable name="vars" value="{vars} {l1StuckFontSize}"/></f:if>
+        <f:if condition="{l1BackgroundColor}"><f:variable name="vars" value="{vars} --atomic-button-background:var({l1BackgroundColor}, #eee);"/></f:if>
+        <f:if condition="{l1IconColor}"><f:variable name="vars" value="{vars} --bs-icon-color:var({l1IconColor});"/></f:if>
+        <f:if condition="{l1LinkColor}"><f:variable name="vars" value="{vars} --plate-nav-l1-color:var({l1LinkColor}); --bs-link--hover-color:var({l1LinkColor})"/></f:if>
         <div class="plate-accordion-nav" style="{vars}">
             <f:if condition="homeLinkTrue">
                 <f:variable name="homeLink" value="/"/>

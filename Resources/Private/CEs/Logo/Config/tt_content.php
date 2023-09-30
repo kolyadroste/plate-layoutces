@@ -6,6 +6,7 @@ defined('TYPO3') or die();
  * */
 $plugin_showfields = '--palette--;;general,header,image,
     --div--;Einstellungen,pi_flexform,
+    --div--;Darstellung,--palette--;;layoutCesMarginPalette,
     --div--;Sichtbarkeit,hidden,--palette--;;layoutCesVisibilityPalette';
 
 

@@ -58,15 +58,6 @@ call_user_func(function($extension = 'plate_layoutces', $cePath = '/Resources/Pr
             ]
         ],
 
-        'tx_plate_layoutces_smbp' => [
-            'exclude' => true,
-            'label' => 'SM Breakpoint',
-            'config' => [
-                'type' => 'input',
-                'default' => '576',
-
-            ]
-        ],
         'tx_plate_layoutces_showatxs' => [
             'exclude' => true,
             'label' => 'Zeige bei XS',
@@ -90,7 +81,7 @@ call_user_func(function($extension = 'plate_layoutces', $cePath = '/Resources/Pr
             'label' => 'SM Breakpoint',
             'config' => [
                 'type' => 'input',
-                'default' => '575',
+                'default' => '576',
 
             ]
         ],
@@ -148,12 +139,30 @@ call_user_func(function($extension = 'plate_layoutces', $cePath = '/Resources/Pr
 
             ]
         ],
+        'tx_plate_layoutces_showatxxl' => [
+            'exclude' => true,
+            'label' => 'Zeige bei XXL',
+            'config' => [
+                'type' => 'check',
+                'default' => '1',
+
+            ]
+        ],
+        'tx_plate_layoutces_xxlbp' => [
+            'exclude' => true,
+            'label' => 'XXL Breakpoint',
+            'config' => [
+                'type' => 'input',
+                'default' => '1400',
+
+            ]
+        ],
         
     ];
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $pp_additional_columns);
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content',
-        'layoutCesVisibilityPalette', 'tx_plate_layoutces_showatxs, tx_plate_layoutces_smbp, tx_plate_layoutces_showatsm, tx_plate_layoutces_mdbp, tx_plate_layoutces_showatmd,  tx_plate_layoutces_lgbp,  tx_plate_layoutces_showatlg, tx_plate_layoutces_xlbp, tx_plate_layoutces_showatxl');
+        'layoutCesVisibilityPalette', 'tx_plate_layoutces_showatxs, tx_plate_layoutces_smbp, tx_plate_layoutces_showatsm, tx_plate_layoutces_mdbp, tx_plate_layoutces_showatmd,  tx_plate_layoutces_lgbp,  tx_plate_layoutces_showatlg, tx_plate_layoutces_xlbp, tx_plate_layoutces_showatxl,tx_plate_layoutces_xxlbp,tx_plate_layoutces_showatxxl');
 
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content',

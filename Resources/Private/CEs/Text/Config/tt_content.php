@@ -6,6 +6,7 @@ defined('TYPO3') or die();
  * */
 $plugin_showfields = '--palette--;;general,header,bodytext,
     --div--;Darstellung,--palette--;;layoutCesMarginPalette,background_color_class,
+    --div--;Darstellung,--palette--;;layoutCesMarginPalette,
     --div--;Sichtbarkeit,hidden,--palette--;;layoutCesVisibilityPalette';
 
 
@@ -24,7 +25,8 @@ $GLOBALS['TCA']['tt_content']['types'][$plugin] = [
         ],
         'bodytext' => [
             'config' => [
-                'enableRichtext' => true
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'bootstrap'
             ]
         ],
     ]

@@ -16,6 +16,8 @@ CREATE TABLE tt_content
     tx_plate_layoutces_lgbp             varchar(255) DEFAULT '' NOT NULL,
     tx_plate_layoutces_showatxl         tinyint(4) unsigned DEFAULT '1' NOT NULL,
     tx_plate_layoutces_xlbp             varchar(255) DEFAULT '' NOT NULL,
+    tx_plate_layoutces_showatxxl         tinyint(4) unsigned DEFAULT '1' NOT NULL,
+    tx_plate_layoutces_xxlbp             varchar(255) DEFAULT '' NOT NULL,
 
     tx_plate_layoutces_margins          varchar(255) DEFAULT '' NOT NULL,
 );

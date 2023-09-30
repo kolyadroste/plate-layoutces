@@ -57,7 +57,7 @@ atomic-stickystate .pl-lce.bgcolor-transition > .\@container.container .\@contai
 }
 @media (min-width: 992px){
     .pl-lce > .\@container.container > .d-grid > .pl-lce-col{
-        justify-content: var(--pl-lce-justify-content, center);
-        align-items: var(--pl-lce-align-items, center);
+        justify-content: var(--pl-lce-desktop-justify-content, center);
+        align-items: var(--pl-lce-desktop-align-items, center);
     }
 }

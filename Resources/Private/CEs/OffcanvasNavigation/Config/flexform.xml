@@ -259,83 +259,17 @@
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">Standard</numIndex>
-                                        <numIndex index="1"></numIndex>
-                                    </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">Primär</numIndex>
-                                        <numIndex index="1">--bs-primary</numIndex>
-                                    </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">Sekundär</numIndex>
-                                        <numIndex index="1">--bs-secondary</numIndex>
-                                    </numIndex>
-                                    <numIndex index="3" type="array">
-                                        <numIndex index="0">tertiär</numIndex>
-                                        <numIndex index="1">--bs-tertiary</numIndex>
-                                    </numIndex>
-                                    <numIndex index="4" type="array">
-                                        <numIndex index="0">quaternär</numIndex>
-                                        <numIndex index="1">--bs-quaternary</numIndex>
-                                    </numIndex>
-                                    <numIndex index="5" type="array">
-                                        <numIndex index="0">Hell</numIndex>
-                                        <numIndex index="1">--bs-light</numIndex>
-                                    </numIndex>
-                                    <numIndex index="6" type="array">
-                                        <numIndex index="0">Dunkel</numIndex>
-                                        <numIndex index="1">--bs-dark</numIndex>
-                                    </numIndex>
-                                    <numIndex index="7" type="array">
-                                        <numIndex index="0">Keine</numIndex>
-                                        <numIndex index="1">--bs-none</numIndex>
-                                    </numIndex>
-                                </items>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
                             </config>
                         </TCEforms>
                     </settings.l1IconColor>
                     <settings.l1LinkColor>
                         <TCEforms>
-                            <label>Icon Farbe</label>
+                            <label>Schrift Farbe</label>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">Standard</numIndex>
-                                        <numIndex index="1"></numIndex>
-                                    </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">Primär</numIndex>
-                                        <numIndex index="1">--bs-primary</numIndex>
-                                    </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">Sekundär</numIndex>
-                                        <numIndex index="1">--bs-secondary</numIndex>
-                                    </numIndex>
-                                    <numIndex index="3" type="array">
-                                        <numIndex index="0">tertiär</numIndex>
-                                        <numIndex index="1">--bs-tertiary</numIndex>
-                                    </numIndex>
-                                    <numIndex index="4" type="array">
-                                        <numIndex index="0">quaternär</numIndex>
-                                        <numIndex index="1">--bs-quaternary</numIndex>
-                                    </numIndex>
-                                    <numIndex index="5" type="array">
-                                        <numIndex index="0">Hell</numIndex>
-                                        <numIndex index="1">--bs-light</numIndex>
-                                    </numIndex>
-                                    <numIndex index="6" type="array">
-                                        <numIndex index="0">Dunkel</numIndex>
-                                        <numIndex index="1">--bs-dark</numIndex>
-                                    </numIndex>
-                                    <numIndex index="7" type="array">
-                                        <numIndex index="0">Keine</numIndex>
-                                        <numIndex index="1">--bs-none</numIndex>
-                                    </numIndex>
-                                </items>
+                                <itemsProcFunc>Atomicplan\PlateLayoutCes\Utility\FlexTCADefaults->bsColorVars</itemsProcFunc>
                             </config>
                         </TCEforms>
                     </settings.l1LinkColor>
