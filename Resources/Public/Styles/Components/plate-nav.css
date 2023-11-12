@@ -28,6 +28,14 @@
 [stuck] .pl-nav-link.-l0 > atomic-button{
     font-size: var(--plate-nav-l0-stuck-fontsize, inherit);
 }
+.pl-nav-link.-l0{
+    color: var(--plate-nav-l0-color, white);
+    background: var(--plate-nav-l0-background, transparent);
+}
+.pl-nav-link.-l0:hover > atomic-button span{
+    color: var(--plate-nav-l0-hover-color, #eee);
+    background: var(--plate-nav-l0-hover-background, transparent);
+}
 .pl-subnav{
     display: flex;
     flex-direction: column;

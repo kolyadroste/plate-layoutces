@@ -174,28 +174,28 @@
                                 <valuePicker>
                                     <items type="array">
                                         <numIndex index="1">
-                                            <numIndex index="0">33 / 33 / 33</numIndex>
-                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                            <numIndex index="0">50 / 50</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr)</numIndex>
                                         </numIndex>
                                         <numIndex index="2">
-                                            <numIndex index="0">50 / 25 / 25</numIndex>
-                                            <numIndex index="1">minmax(0,2fr) minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                            <numIndex index="0">66 / 33</numIndex>
+                                            <numIndex index="1">minmax(0,2fr) minmax(0,1fr)</numIndex>
                                         </numIndex>
                                         <numIndex index="4">
-                                            <numIndex index="0">Auto / Auto / 100px</numIndex>
-                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) 100px</numIndex>
+                                            <numIndex index="0">Auto / 100px</numIndex>
+                                            <numIndex index="1">minmax(0,1fr)  100px</numIndex>
                                         </numIndex>
                                         <numIndex index="5">
-                                            <numIndex index="0">Auto / Auto / 200px</numIndex>
-                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) 200px</numIndex>
+                                            <numIndex index="0">Auto / 200px</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) 200px</numIndex>
                                         </numIndex>
                                         <numIndex index="6">
-                                            <numIndex index="0">200px / auto / auto</numIndex>
-                                            <numIndex index="1">200px minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                            <numIndex index="0">200px / auto </numIndex>
+                                            <numIndex index="1">200px minmax(0,1fr) </numIndex>
                                         </numIndex>
                                     </items>
                                 </valuePicker>
-                                <default>minmax(0,1fr) minmax(0,1f) minmax(0,1f)</default>
+                                <default>minmax(0,1fr) minmax(0,1f)</default>
                             </config>
                         </TCEforms>
                     </settings.colsDesktop>
@@ -208,19 +208,11 @@
                                     <items type="array">
                                         <numIndex index="1">
                                             <numIndex index="0">Nebeneinander</numIndex>
-                                            <numIndex index="1">"col1 col2 col3"</numIndex>
+                                            <numIndex index="1">"col1 col2"</numIndex>
                                         </numIndex>
                                         <numIndex index="2">
                                             <numIndex index="0">Untereinander</numIndex>
-                                            <numIndex index="1">"col1 col1 col1" "col2 col2 col2" "col3 col3 col3"</numIndex>
-                                        </numIndex>
-                                        <numIndex index="3">
-                                            <numIndex index="0">1 und 2 Nebeneinander 3 darunter</numIndex>
-                                            <numIndex index="1">"col1 col2 col2" "col3 col3 col3"</numIndex>
-                                        </numIndex>
-                                        <numIndex index="4">
-                                            <numIndex index="0">1 oben, 2 und 3 darunter</numIndex>
-                                            <numIndex index="1">"col1 col1 col1" "col2 col3 col3"</numIndex>
+                                            <numIndex index="1">"col1 col1" "col2 col2"</numIndex>
                                         </numIndex>
                                     </items>
                                 </valuePicker>
@@ -236,24 +228,24 @@
                                 <valuePicker>
                                     <items type="array">
                                         <numIndex index="1">
-                                            <numIndex index="0">33 / 33 / 33</numIndex>
-                                            <numIndex index="1">minmax(0,1fr) minmax(0,1rf) minmax(0,1fr)</numIndex>
+                                            <numIndex index="0">50 / 50</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr)</numIndex>
                                         </numIndex>
                                         <numIndex index="2">
-                                            <numIndex index="0">50 / 25 / 25</numIndex>
-                                            <numIndex index="1">minmax(0,2fr) minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                            <numIndex index="0">66 / 33</numIndex>
+                                            <numIndex index="1">minmax(0,2fr) minmax(0,1fr)</numIndex>
                                         </numIndex>
                                         <numIndex index="4">
-                                            <numIndex index="0">Auto / Auto / 100px</numIndex>
-                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) 100px</numIndex>
+                                            <numIndex index="0">Auto / 100px</numIndex>
+                                            <numIndex index="1">minmax(0,1fr)  100px</numIndex>
                                         </numIndex>
                                         <numIndex index="5">
-                                            <numIndex index="0">Auto / Auto / 200px</numIndex>
-                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) 200px</numIndex>
+                                            <numIndex index="0">Auto / 200px</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) 200px</numIndex>
                                         </numIndex>
                                         <numIndex index="6">
-                                            <numIndex index="0">200px / auto / auto</numIndex>
-                                            <numIndex index="1">200px minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                            <numIndex index="0">200px / auto </numIndex>
+                                            <numIndex index="1">200px minmax(0,1fr) </numIndex>
                                         </numIndex>
                                     </items>
                                 </valuePicker>
@@ -270,19 +262,11 @@
                                     <items type="array">
                                         <numIndex index="1">
                                             <numIndex index="0">Nebeneinander</numIndex>
-                                            <numIndex index="1">"col1 col2 col3"</numIndex>
+                                            <numIndex index="1">"col1 col2"</numIndex>
                                         </numIndex>
                                         <numIndex index="2">
                                             <numIndex index="0">Untereinander</numIndex>
-                                            <numIndex index="1">"col1 col1 col1" "col2 col2 col2" "col3 col3 col3"</numIndex>
-                                        </numIndex>
-                                        <numIndex index="3">
-                                            <numIndex index="0">1 und 2 Nebeneinander 3 darunter</numIndex>
-                                            <numIndex index="1">"col1 col2 col2" "col3 col3 col3"</numIndex>
-                                        </numIndex>
-                                        <numIndex index="4">
-                                            <numIndex index="0">1 oben, 2 und 3 darunter</numIndex>
-                                            <numIndex index="1">"col1 col1 col1" "col2 col3 col3"</numIndex>
+                                            <numIndex index="1">"col1 col1" "col2 col2"</numIndex>
                                         </numIndex>
                                     </items>
                                 </valuePicker>
@@ -298,28 +282,28 @@
                                 <valuePicker>
                                     <items type="array">
                                         <numIndex index="1">
-                                            <numIndex index="0">33 / 33 / 33</numIndex>
-                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                            <numIndex index="0">50 / 50</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr)</numIndex>
                                         </numIndex>
                                         <numIndex index="2">
-                                            <numIndex index="0">50 / 25 / 25</numIndex>
-                                            <numIndex index="1">minmax(0,2fr) minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                            <numIndex index="0">66 / 33</numIndex>
+                                            <numIndex index="1">minmax(0,2fr) minmax(0,1fr)</numIndex>
                                         </numIndex>
                                         <numIndex index="4">
-                                            <numIndex index="0">Auto / Auto / 100px</numIndex>
-                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) 100px</numIndex>
+                                            <numIndex index="0">Auto / 100px</numIndex>
+                                            <numIndex index="1">minmax(0,1fr)  100px</numIndex>
                                         </numIndex>
                                         <numIndex index="5">
-                                            <numIndex index="0">Auto / Auto / 200px</numIndex>
-                                            <numIndex index="1">minmax(0,1fr) minmax(0,1fr) 200px</numIndex>
+                                            <numIndex index="0">Auto / 200px</numIndex>
+                                            <numIndex index="1">minmax(0,1fr) 200px</numIndex>
                                         </numIndex>
                                         <numIndex index="6">
-                                            <numIndex index="0">200px / auto / auto</numIndex>
-                                            <numIndex index="1">200px minmax(0,1fr) minmax(0,1fr)</numIndex>
+                                            <numIndex index="0">200px / auto </numIndex>
+                                            <numIndex index="1">200px minmax(0,1fr) </numIndex>
                                         </numIndex>
                                     </items>
                                 </valuePicker>
-                                <default></default>
+                                <default>minmax(0,1fr) minmax(0,1fr)</default>
                             </config>
                         </TCEforms>
                     </settings.colsMobile>
@@ -332,23 +316,15 @@
                                     <items type="array">
                                         <numIndex index="1">
                                             <numIndex index="0">Nebeneinander</numIndex>
-                                            <numIndex index="1">"col1 col2 col3"</numIndex>
+                                            <numIndex index="1">"col1 col2"</numIndex>
                                         </numIndex>
                                         <numIndex index="2">
                                             <numIndex index="0">Untereinander</numIndex>
-                                            <numIndex index="1">"col1 col1 col1" "col2 col2 col2" "col3 col3 col3"</numIndex>
-                                        </numIndex>
-                                        <numIndex index="3">
-                                            <numIndex index="0">1 und 2 Nebeneinander 3 darunter</numIndex>
-                                            <numIndex index="1">"col1 col2 col2" "col3 col3 col3"</numIndex>
-                                        </numIndex>
-                                        <numIndex index="4">
-                                            <numIndex index="0">1 oben, 2 und 3 darunter</numIndex>
-                                            <numIndex index="1">"col1 col1 col1" "col2 col3 col3"</numIndex>
+                                            <numIndex index="1">"col1 col1" "col2 col2"</numIndex>
                                         </numIndex>
                                     </items>
                                 </valuePicker>
-                                <default></default>
+                                <default>col1 col2</default>
                             </config>
                         </TCEforms>
                     </settings.colAreasMobile>

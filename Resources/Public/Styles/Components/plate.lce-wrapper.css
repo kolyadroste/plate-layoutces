@@ -45,6 +45,7 @@ atomic-stickystate .pl-lce.bgcolor-transition > .\@container.container .\@contai
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+.pl-lce > .\@container.container-fluid > .d-grid > .pl-lce-col,
 .pl-lce > .\@container.container > .d-grid > .pl-lce-col{
     justify-content: var(--pl-lce-mobile-justify-content, center);
     align-items: var(--pl-lce-mobile-align-items, center);

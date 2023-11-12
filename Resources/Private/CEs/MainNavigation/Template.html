@@ -23,6 +23,7 @@
         <f:if condition="{l0BackgroundColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-background:var({l0BackgroundColor});"/></f:if>
         <f:if condition="{l0IconColor}"><f:variable name="vars" value="{vars} --bs-icon-color:var({l0IconColor}) !important;"/></f:if>
         <f:if condition="{l0LinkColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-color:var({l0LinkColor}) !important; --bs-link-color:var({l0LinkColor});"/></f:if>
+        <f:if condition="{l0LinkHoverColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-hover-color:var({l0LinkHoverColor}) !important; --bs-link-color:var({l0LinkColor});"/></f:if>
         <f:if condition="{l0ButtonColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-btn-background:var({l0ButtonColor}) !important;"/></f:if>
         <f:if condition="{l0ButtonHoverColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-btn-hover-background:var({l0ButtonHoverColor}) !important;"/></f:if>
         <f:if condition="{l0LinkHoverColor}"><f:variable name="vars" value="{vars} --bs-link-hover-color:var({l0LinkHoverColor});"/></f:if>
@@ -32,6 +33,7 @@
         <f:if condition="{l1BackgroundColor}"><f:variable name="vars" value="{vars} --plate-nav-l1-background:var({l1BackgroundColor});"/></f:if>
         <f:if condition="{l1IconColor}"><f:variable name="vars" value="{vars} --bs-icon-color:var({l1IconColor});"/></f:if>
         <f:if condition="{l1LinkColor}"><f:variable name="vars" value="{vars} --plate-nav-l1-color:var({l1LinkColor}); --bs-link-color:var({l1LinkColor});"/></f:if>
+        <f:if condition="{l1LinkHoverColor}"><f:variable name="vars" value="{vars} --plate-nav-l1-hover-color:var({l1LinkHoverColor}); --bs-link-color:var({l1LinkColor});"/></f:if>
         <f:if condition="{l1ButtonColor}"><f:variable name="vars" value="{vars} --plate-nav-l1-btn-background:var({l0ButtonColor}) !important;"/></f:if>
         <f:if condition="{l1ButtonHoverColor}"><f:variable name="vars" value="{vars} --plate-nav-l1-btn-hover-background:var({l1ButtonHoverColor});"/></f:if>
         <f:if condition="{l1LinkHoverColor}"><f:variable name="vars" value="{vars} --bs-l1button-hover-color:var({l1LinkHoverColor});"/></f:if>
@@ -41,11 +43,13 @@
                 <f:then><f:variable name="homeLink" value="{f:uri.page(pageUid:site.rootPageId)}"/></f:then>
                 <f:else><f:variable name="homeLink" value=""/></f:else>
             </f:if>
-            <f:comment >{homeLink}</f:comment>
+
             <f:variable name="navConfig" value="{
+                contentnav:contentnav,
                 nav:mainNavigation,
                 homeLinkTrue: homeLinkTrue,
                 homeLink: homeLink,
+                homeLinkUid: site.rootPageId,
                 homeLinkIsIcon: homeLinkIsIcon,
                 homeIcon: homeIcon,
                 dropdownIcon: dropdownIcon,

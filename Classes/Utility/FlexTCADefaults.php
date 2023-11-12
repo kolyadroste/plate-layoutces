@@ -186,4 +186,22 @@ class FlexTCADefaults
             ['Ende', 'end']
         ];
     }
+
+	public function gridDefaults2Col(array &$config)
+	{
+		// simple and stupid example
+		// change this to dynamically populate the list!
+		$config['items'] = [
+			// label, value
+			['Standard', ''],
+			['Sehr Klein', '--bs-gap-xsmall'],
+			['Klein', '--bs-gap-small'],
+			['Medium', '--bs-gap-medium'],
+			['Groß', '--bs-gap-big'],
+			['Sehr Groß', '--bs-gap-large'],
+			['XL', '--bs-gap-xlarge'],
+			['XXL', '--bs-gap-xxlarge'],
+			['Kein Abstand', '--bs-gap-0']
+		];
+	}
 }
