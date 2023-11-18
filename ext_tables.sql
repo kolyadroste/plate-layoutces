@@ -20,34 +20,6 @@ CREATE TABLE tt_content
     tx_plate_layoutces_xxlbp             varchar(255) DEFAULT '' NOT NULL,
 
     tx_plate_layoutces_margins          varchar(255) DEFAULT '' NOT NULL,
+    tx_pl_lces_contentlinks_add_to_nav tinyint(4) unsigned DEFAULT '0' NOT NULL,
+    pl_lces_nav_title varchar(255) DEFAULT '' NOT NULL,
 );
-#
-# alter tx_plate_layout_ces_margins table
-#
-CREATE TABLE tx_plate_layout_ces_margins
-(
-    smbp_margin     varchar(255) DEFAULT '' NOT NULL,
-    smtop_margin    varchar(255) DEFAULT '' NOT NULL,
-    smleft_margin   varchar(255) DEFAULT '' NOT NULL,
-    smbottom_margin varchar(255) DEFAULT '' NOT NULL,
-    smright_margin  varchar(255) DEFAULT '' NOT NULL,
-
-    mdbp_margin     varchar(255) DEFAULT '' NOT NULL,
-    mdtop_margin    varchar(255) DEFAULT '' NOT NULL,
-    mdleft_margin   varchar(255) DEFAULT '' NOT NULL,
-    mdbottom_margin varchar(255) DEFAULT '' NOT NULL,
-    mdright_margin  varchar(255) DEFAULT '' NOT NULL,
-
-    lgbp_margin     varchar(255) DEFAULT '' NOT NULL,
-    lgtop_margin    varchar(255) DEFAULT '' NOT NULL,
-    lgleft_margin   varchar(255) DEFAULT '' NOT NULL,
-    lgbottom_margin varchar(255) DEFAULT '' NOT NULL,
-    lgright_margin  varchar(255) DEFAULT '' NOT NULL,
-
-    xlbp_margin     varchar(255) DEFAULT '' NOT NULL,
-    xltop_margin    varchar(255) DEFAULT '' NOT NULL,
-    xlleft_margin   varchar(255) DEFAULT '' NOT NULL,
-    xlbottom_margin varchar(255) DEFAULT '' NOT NULL,
-    xlright_margin  varchar(255) DEFAULT '' NOT NULL,
-);
-
