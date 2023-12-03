@@ -25,14 +25,12 @@
     transition: font-size 0.25s ease-in-out;
     --vars-icon-size: var(--pl-nav-link-l0-iconsize, inherit);
 }
-[stuck] .pl-nav-link.-l0 > atomic-button{
-    font-size: var(--plate-nav-l0-stuck-fontsize, inherit);
-}
 .pl-nav-link.-l0{
     color: var(--plate-nav-l0-color, white);
     background: var(--plate-nav-l0-background, transparent);
 }
 .pl-nav-link.-l0:hover > atomic-button span{
+    --atomic-button-color-hover: var(--plate-nav-l0-hover-color, #eee);
     color: var(--plate-nav-l0-hover-color, #eee);
     background: var(--plate-nav-l0-hover-background, transparent);
 }
@@ -47,4 +45,18 @@
     --atomic-button-background: var(--plate-nav-l1-btn-background, var(--bs-primary));
     --atomic-button-background-hover: var(--plate-nav-l1-btn-hover-background, transparent);
     --vars-icon-size: var(--pl-nav-link-l1-iconsize, inherit);
+}
+
+[stuck] .pl-nav-link.-l0 > atomic-button{
+    --atomic-button-color: var(--plate-nav-l0-stuck-color, white);
+    --atomic-button-background: var(--plate-nav-l0-stuck-btn-background, var(--bs-primary));
+    --atomic-button-background-hover: var(--plate-nav-l0-stuck-btn-hover-background, transparent);
+}
+[stuck] .pl-nav-link.-l0{
+    color: var(--plate-nav-l0-stuck-color, white);
+    background: var(--plate-nav-l0-stuck-background, transparent);
+}
+[stuck] .pl-nav-link.-l0:hover > atomic-button span{
+    --atomic-button-color-hover: var(--plate-nav-l0-stuck-hover-color, #eee);
+    color: var(--plate-nav-l0-stuck-hover-color, #eee);
 }

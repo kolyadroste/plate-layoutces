@@ -24,9 +24,14 @@
         <f:if condition="{l0IconColor}"><f:variable name="vars" value="{vars} --bs-icon-color:var({l0IconColor}) !important;"/></f:if>
         <f:if condition="{l0LinkColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-color:var({l0LinkColor}) !important; --bs-link-color:var({l0LinkColor});"/></f:if>
         <f:if condition="{l0LinkHoverColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-hover-color:var({l0LinkHoverColor}) !important; --bs-link-color:var({l0LinkColor});"/></f:if>
-        <f:if condition="{l0ButtonColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-btn-background:var({l0ButtonColor}) !important;"/></f:if>
-        <f:if condition="{l0ButtonHoverColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-btn-hover-background:var({l0ButtonHoverColor}) !important;"/></f:if>
-        <f:if condition="{l0LinkHoverColor}"><f:variable name="vars" value="{vars} --bs-link-hover-color:var({l0LinkHoverColor});"/></f:if>
+        <f:if condition="{l0ButtonColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-btn-background:var({l0ButtonColor}, transparent) !important;"/></f:if>
+        <f:if condition="{l0ButtonHoverColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-btn-hover-background:var({l0ButtonHoverColor}, transparent) !important;"/></f:if>
+
+        <f:if condition="{l0StuckLinkColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-stuck-color:var({l0StuckLinkColor}) !important; --bs-link-color:var({l0LinkColor});"/></f:if>
+        <f:if condition="{l0StuckLinkHoverColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-stuck-hover-color:var({l0StuckLinkHoverColor}) !important; --bs-link-color:var({l0LinkColor});"/></f:if>
+        <f:if condition="{l0StuckButtonColor}"><f:variable name="vars" value="{vars} --plate-nav-l0-stuck-btn-background:var({l0StuckButtonColor}, transparent) !important;"/></f:if>
+        <f:if condition="{l0StuckButtonHoverColor}"><f:variable name="vars" value="{vars} --plate-nav-stuck-l0-btn-hover-background:var({l0StuckButtonHoverColor}, transparent) !important;"/></f:if>
+
 
         <f:if condition="{l1FontSize}"><f:variable name="vars" value="{vars} {l1FontSize};"/></f:if>
         <f:if condition="{l1StuckFontSize}"><f:variable name="vars" value="{vars} {l1StuckFontSize}"/></f:if>
@@ -43,7 +48,6 @@
                 <f:then><f:variable name="homeLink" value="{f:uri.page(pageUid:site.rootPageId)}"/></f:then>
                 <f:else><f:variable name="homeLink" value=""/></f:else>
             </f:if>
-
             <f:variable name="navConfig" value="{
                 contentnav:contentnav,
                 nav:mainNavigation,

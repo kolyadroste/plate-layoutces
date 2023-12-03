@@ -34,35 +34,45 @@ tt_content.tx_plate_layoutces_mainnavigation {
                 data = flexform:pi_flexform:settings.l0LinkColor
                 ifEmpty = --bs-primary
             }
-            l0ButtonColor = TEXT
-            l0ButtonColor {
-                data = flexform:pi_flexform:settings.l0ButtonColor
-                ifEmpty = --bs-primary
-            }
             l0LinkHoverColor = TEXT
             l0LinkHoverColor {
                 data = flexform:pi_flexform:settings.l0LinkHoverColor
-                ifEmpty = --bs-primary-hover
+                ifEmpty = --bs-transparent
+            }
+            l0ButtonColor = TEXT
+            l0ButtonColor {
+                data = flexform:pi_flexform:settings.l0ButtonColor
+                ifEmpty = --bs-transparent
             }
             l0ButtonHoverColor = TEXT
             l0ButtonHoverColor {
                 data = flexform:pi_flexform:settings.l0ButtonHoverColor
-                ifEmpty = --bs-primary-hover
+                ifEmpty = --bs-transparent
             }
-            l0LinkType = TEXT
-            l0LinkType {
-                data = flexform:pi_flexform:settings.l0LinkType
-                ifEmpty = transparent
+            l0StuckLinkColor = TEXT
+            l0StuckLinkColor {
+                data = flexform:pi_flexform:settings.l0StuckLinkColor
+                ifEmpty = --bs-white
+            }
+            l0StuckLinkHoverColor = TEXT
+            l0StuckLinkHoverColor {
+                data = flexform:pi_flexform:settings.l0StuckLinkHoverColor
+                ifEmpty = --bs-white-hover
+            }
+            l0StuckButtonColor = TEXT
+            l0StuckButtonColor {
+                data = flexform:pi_flexform:settings.l0StuckButtonColor
+                ifEmpty = --bs-transparent
+            }
+            l0StuckButtonHoverColor = TEXT
+            l0StuckButtonHoverColor {
+                data = flexform:pi_flexform:settings.l0StuckButtonHoverColor
+                ifEmpty = --bs-transparent
             }
             showL1Thumbnails = TEXT
             showL1Thumbnails {
                 data = flexform:pi_flexform:settings.showL1Thumbnails
                 ifEmpty = 0
-            }
-            l1LinkType = TEXT
-            l1LinkType {
-                data = flexform:pi_flexform:settings.l1LinkType
-                ifEmpty = transparent
             }
             navL1Gap = TEXT
             navL1Gap.data = flexform: pi_flexform:settings.navL1Gap
@@ -81,7 +91,7 @@ tt_content.tx_plate_layoutces_mainnavigation {
             l1ButtonColor = TEXT
             l1ButtonColor {
                 data = flexform:pi_flexform:settings.l1ButtonColor
-                ifEmpty = --bs-primary
+                ifEmpty = --bs-transparent
             }
             l1LinkHoverColor = TEXT
             l1LinkHoverColor {
@@ -91,7 +101,7 @@ tt_content.tx_plate_layoutces_mainnavigation {
             l1ButtonHoverColor = TEXT
             l1ButtonHoverColor {
                 data = flexform:pi_flexform:settings.l1ButtonHoverColor
-                ifEmpty = --bs-primary-hover
+                ifEmpty = --bs-transparent
             }
 
 
