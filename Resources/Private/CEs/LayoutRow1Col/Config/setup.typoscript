@@ -39,7 +39,7 @@ tt_content.tx_plate_layoutces_layoutrow1col {
             backgroundColorFull = TEXT
             backgroundColorFull {
                 data = flexform:pi_flexform:settings.backgroundColorFull
-                ifEmpty = --bs-primary
+                ifEmpty = --bs-transparent
             }
             stuckBackgroundColorFull = TEXT
             stuckBackgroundColorFull {
