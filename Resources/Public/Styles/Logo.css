@@ -11,7 +11,7 @@
     max-width: 100%;
     height: auto;
 }
-[stuck] .pllces-logo-default{
+[stuck] .plateLayoutCesLogo:not(.sticky-logo) .pllces-logo-default{
     display:none;
 }
 [stuck] .pllces-logo-sticky{

@@ -15,7 +15,10 @@
     </f:section>
 
     <f:section name="Main">
-        <div class="wrapper plateLayoutCesLogo">
+        <f:if condition="{logoStuck} && {logoStuck.0}">
+            <f:variable name="stickyLogoClass" value="sticky-logo"/>
+        </f:if>
+        <div class="wrapper plateLayoutCesLogo {stickyLogoClass}">
             <f:if condition="{logoOverride} && {logoOverride.0}">
                 <f:asset.css identifier="plate_layoutces.logo" href="{public}/Styles/Logo.css"/>
                 <f:if condition="{logoOverride.0.link}">
@@ -53,8 +56,8 @@
             <f:if condition="{stuckLogoWidth} || {stuckLogoHeight}">
 
                 atomic-stickystate[stuck] #c{data.uid} img{
-                    <f:if condition="{stuckLogoWidth}">width: {stuckLogoWidth}px;</f:if>
-                    <f:if condition="{stuckLogoHeight}">height: {stuckLogoHeight}px;</f:if>
+                <f:if condition="{stuckLogoWidth}">width: {stuckLogoWidth}px;</f:if>
+                <f:if condition="{stuckLogoHeight}">height: {stuckLogoHeight}px;</f:if>
                 }
             </f:if></f:asset.css>
     </f:section>
