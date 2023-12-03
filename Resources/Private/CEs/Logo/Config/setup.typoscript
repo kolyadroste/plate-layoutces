@@ -37,14 +37,12 @@ tt_content.tx_plate_layoutces_logo {
                 references.fieldName = image
                 references.table = tt_content
                 as = logoOverride
-
-                dataProcessing {
-                    10 = TYPO3\CMS\Frontend\DataProcessing\TextProcessor
-                    10 {
-                        references.fieldName  = showinview
-                        as = showinview
-                    }
-                }
+            }
+            20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            20 {
+                references.fieldName = media2
+                references.table = tt_content
+                as = logoStuck
             }
         }
 

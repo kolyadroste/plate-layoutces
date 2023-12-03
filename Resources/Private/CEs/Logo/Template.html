@@ -21,11 +21,24 @@
                 <f:if condition="{logoOverride.0.link}">
                     <f:then>
                         <f:link.typolink parameter="{logoOverride.0.link}">
-                            <f:image image="{logoOverride.0}" width="{logoWidth}" height="{logoHeight}" alt="{logo.alternative}" title="{logo.title}"/>
+                            <f:image image="{logoOverride.0}" width="{logoWidth}" height="{logoHeight}" alt="{logoOverride.0.alternative}" title="{logoOverride.0.title}"/>
                         </f:link.typolink>
                     </f:then>
                     <f:else>
-                        <f:image image="{logoOverride.0}" width="{logoWidth}" height="{logoHeight}" alt="{logo.alternative}" title="{logo.title}"/>
+                        <f:image image="{logoOverride.0}" class="pllces-logo-default" width="{logoWidth}" height="{logoHeight}" alt="{logoOverride.0.alternative}" title="{logoOverride.0.title}"/>
+                    </f:else>
+                </f:if>
+            </f:if>
+            <f:if condition="{logoStuck} && {logoStuck.0}">
+                <f:asset.css identifier="plate_layoutces.logo" href="{public}/Styles/Logo.css"/>
+                <f:if condition="{logoStuck.0.link}">
+                    <f:then>
+                        <f:link.typolink parameter="{logoOverride.0.link}">
+                            <f:image image="{logoStuck.0}" class="pllces-logo-sticky" width="{stuckLogoWidth}" height="{stuckLogoHeight}" alt="{logoStuck.0.alternative}" title="{logoStuck.0.title}"/>
+                        </f:link.typolink>
+                    </f:then>
+                    <f:else>
+                        <f:image image="{logoStuck.0}" class="pllces-logo-sticky" width="{stuckLogoWidth}" height="{stuckLogoHeight}" alt="{logoStuck.0.alternative}" title="{logoStuck.0.title}"/>
                     </f:else>
                 </f:if>
             </f:if>

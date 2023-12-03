@@ -4,7 +4,7 @@ defined('TYPO3') or die();
 /*
  * plugin Field definitions
  * */
-$plugin_showfields = '--palette--;;general,header,image,
+$plugin_showfields = '--palette--;;general,header,image,media2,
     --div--;Einstellungen,pi_flexform,
     --div--;Darstellung,--palette--;;layoutCesMarginPalette,
     --div--;Sichtbarkeit,hidden,--palette--;;layoutCesVisibilityPalette';
@@ -86,5 +86,11 @@ $GLOBALS['TCA']['tt_content']['types'][$plugin] = [
                 'maxitems' => 1
             ]
         ],
+		'media2' => [
+			'label' => 'Sticky Logo',
+			'config' => [
+				'maxitems' => 1
+			]
+		],
     ]
 ];

@@ -1,8 +1,19 @@
-.plateLayoutCesLogo img{
+.pllces-logo-default{
     max-width: 100%;
     height: auto;
     transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 .plateLayoutCesLogo a:hover{
     opacity: var(--plate-layoutces-logo-hover-opacity, 0.8);
+}
+.pllces-logo-sticky{
+    display:none;
+    max-width: 100%;
+    height: auto;
+}
+[stuck] .pllces-logo-default{
+    display:none;
+}
+[stuck] .pllces-logo-sticky{
+    display:block;
 }
