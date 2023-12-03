@@ -51,12 +51,14 @@ atomic-stickystate .pl-lce.bgcolor-transition > .\@container.container .\@contai
     align-items: var(--pl-lce-mobile-align-items, center);
 }
 @media (min-width: 768px){
+    .pl-lce > .\@container.container-fluid > .d-grid > .pl-lce-col,
     .pl-lce > .\@container.container > .d-grid > .pl-lce-col{
         justify-content: var(--pl-lce-tablet-justify-content, center);
         align-items: var(--pl-lce-tablet-align-items, center);
     }
 }
 @media (min-width: 992px){
+    .pl-lce > .\@container.container-fluid > .d-grid > .pl-lce-col,
     .pl-lce > .\@container.container > .d-grid > .pl-lce-col{
         justify-content: var(--pl-lce-desktop-justify-content, center);
         align-items: var(--pl-lce-desktop-align-items, center);
